@@ -7,6 +7,11 @@
 
 
 /*Slider*/
+.slider-edit{
+    text-align: center;
+    margin: auto;
+}
+
 #slider {
     margin-top: 60px;
 }
@@ -99,7 +104,7 @@
 }
 
 #content .about_content p {
-    text-align: center;
+    text-align: justify;
     color: black;
     opacity: 0.6;
 }
@@ -152,6 +157,7 @@
     font-size: 18px;
     color: #9c9c9c;
 }
+
 
 /*End title content*/
 /*count down sale*/
