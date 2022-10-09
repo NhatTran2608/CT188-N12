@@ -1,11 +1,4 @@
 
-
-/*End Head NAV*/
-
-/*Child NAV*/
-
-
-
 /*Slider*/
 .slider-edit{
     text-align: center;
@@ -75,6 +68,10 @@
 
 #slider .control i:hover {
     background-color: #ccc;
+}
+
+.click1:after , .click2:after , .click3:after {
+    background-color: black;
 }
 /*End Slider*/
 
