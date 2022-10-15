@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./Css/Login/Login.css">
     <link rel="icon" href="./bxs-smile.svg">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="Js/backLogin.js"></script>
 
 </head>
 <body>
@@ -66,13 +67,13 @@
             <div class="login_section">
                 <h3>Đăng nhập</h3>
                 <p>Bạn chưa có tài khoản ?<a href="./SignUp.html"> Đăng ký</a></p>
-                <div class="form_group">
+                <div id="user_form" class="form_group">
                     <form action="">
-                        <input type="text" required placeholder="Email hoặc số điện thoại" class="input_form">
-                        <input type="password" required placeholder="Mật khẩu" class="input_form marginTop_10px"><br>
+                        <input type="text" required placeholder="Email hoặc số điện thoại" class="input_form" id="usr">
+                        <input type="password" required placeholder="Mật khẩu" class="input_form marginTop_10px" id="pass"><br>
                          <input type="checkbox" name="" id="remember" class="marginTop_10px"> 
                         <label for="remember"> <span> Ghi nhớ tài khoản</span> </label> 
-                        <button class="button_login">Đăng nhập</button>
+                        <button class="button_login" onclick="login_usr();">Đăng nhập</button>
                     </form>
                 </div>
             </div>
