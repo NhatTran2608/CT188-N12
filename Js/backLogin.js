@@ -7,7 +7,7 @@ function login_usr(){
     var y = document.getElementById('pass').value
     if(x == 'admin' && y == '123'){
         alert('Đăng nhập thành công');
-        window.location.href = 'index.html';
+        window.location.href = '/index.html';
     }
     else if (x == ''){
     }

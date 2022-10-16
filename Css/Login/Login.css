@@ -76,10 +76,21 @@
     padding: 10px 20px;
     border: none;
     outline: none;
-    background: #47474c;
     color: white;
 }
 
 .button_login{
+    display: block;
     cursor: pointer;
+    padding: 10px;
+    background-color: #009EFF;
+    border-radius: 2px; 
+    
 }
+
+.button_login_nen{
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+

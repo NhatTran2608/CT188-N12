@@ -68,7 +68,7 @@ leftIcon.addEventListener('click',function() {
 })
 
 
-var endsale = new Date("October 25 , 2022 00:00:00").getTime()
+var endsale = new Date("November 15 , 2022 00:00:00").getTime()
 setInterval(function(){
     var beginSale = new Date().getTime();
     var endGame = endsale - beginSale;
