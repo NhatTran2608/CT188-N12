@@ -7,12 +7,14 @@
     <title>Burh Shop</title>
     <link rel="stylesheet" href="img/">
     <link rel="icon" href="./bxs-smile.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="Shop/assetShop.css">
     <link rel="stylesheet" href="./Css/Home/assetHome.css">
+    <script src="Js/backCart.js"></script>
     
 </head>
-<body>
+<body onload="showCart()">
     <main>
         <header>
             <div class="frist_header">
@@ -40,9 +42,43 @@
                         <i class='bx bx-user'></i>
                     </span>
                     <span class="cart_icon">
-                        <a href="./cart.html"><i class='bx bx-cart' ></i></a>
+                        <a href="#">
+                            <i class='bx bx-cart'><span>0</span></i>
+                        </a>
                     </span>
                 </span>
+            </div>
+            
+            <div class="cart hideCart">
+                <div class="cart_container">
+                    <div class="cart_about">
+                        <div class="container">
+                            <div class="main_cell">
+                
+                                <table border="1">
+                                    <thead>
+                                        <tr>
+                                            <h3 class="title_sp">CHI TIẾT ĐƠN HÀNG</h3>
+                                        </tr>
+                                    </thead>
+                
+                                    <tbody id="tbody-table">
+                
+                
+                                    </tbody>
+                
+<!--                 
+                                    <tfoot id="tfoot-table">
+                
+                                    </tfoot> -->
+                
+                                </table>
+                
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <nav>
@@ -209,8 +245,9 @@
                                     </span>
                                 </div>
                                 <div class="footer_product">
-                                    <button>Mua Liền</button>
-                                    <button>Xíu Mua</button>
+                                    <span> Số lượng: <input type="number" value="1" id="sp001" min="0" max="100" size="3" value="0" >
+                                        <input type="button" value="Đặt hàng" onclick="addCart('sp001')">
+                                    </span>
                                 </div>
                             </div>
                         </div>        
@@ -613,8 +650,6 @@
                 <br>
             </div>
         </div>
-
-            
 
         <footer>
             <div class="border"></div>

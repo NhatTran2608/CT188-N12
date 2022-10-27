@@ -1,6 +1,12 @@
 
+
+table{
+    width: 100%;
+    margin-top: 10px;
+}
+
 .width {
-    width: 600px;
+    width: 100%;
 }
 
 .child_body{
@@ -72,4 +78,18 @@
 #content .continue_buy button a {
     text-decoration: none;
     color: white;
+}
+
+tbody tr td {
+    padding: 5px 0;
+}
+
+#Reset{
+    padding: 5px;
+    cursor: pointer;
+}
+
+#Reset:hover{
+    border-radius: 5px;
+    background-color: #989797;
 }

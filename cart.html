@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,23 +9,26 @@
     <link rel="stylesheet" href="img/">
     <link rel="icon" href="./bxs-smile.svg">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
     <link rel="stylesheet" href="Shop/assetShop.css">
     <link rel="stylesheet" href="./Css/Cart/assetCart.css">
-    
+    <script src="Js/backCart.js"></script>
+
 </head>
-<body>
+
+<body onload="showCart()">
     <main>
         <header>
             <div class="frist_header">
                 <div>
-                    <a href="./index.html"><img class="logo_CH" src="img/logo_CH.jpg" alt="" ></a>
+                    <a href="./index.html"><img class="logo_CH" src="img/logo_CH.jpg" alt=""></a>
                 </div>
 
                 <div class="number_phone line_H">
                     <p>
-                        <i class='bx bxs-phone phone'></i> 
-                        0373357405</p>
+                        <i class='bx bxs-phone phone'></i>
+                        0373357405
+                    </p>
                 </div>
                 <div class="shop_name">
                     <h1>BURHSHOP
@@ -40,7 +44,7 @@
                         <i class='bx bx-user'></i>
                     </span>
                     <span class="cart_icon">
-                        <i class='bx bx-cart' ></i>
+                        <i class='bx bx-cart'></i>
                     </span>
                 </span>
             </div>
@@ -49,12 +53,12 @@
                 <ul class="nav_body">
                     <li><a href="./index.html">Home</a></li>
                     <li class="Shop_parent"><a href="./shop.html">Shop<i class='bx bx-chevron-down'></i>
-                        <ul class="sub_nav">
-                            <li><a href="./shop.html">Apple</a></li>
-                            <li><a href="#">Androi</a></li>
-                            <li><a href="./accessory.html">Phụ kiện</a></li>
-                        </ul>
-                    </a></li>
+                            <ul class="sub_nav">
+                                <li><a href="./shop.html">Apple</a></li>
+                                <li><a href="#">Androi</a></li>
+                                <li><a href="./accessory.html">Phụ kiện</a></li>
+                            </ul>
+                        </a></li>
                     <li><a href="./blog.html">Blog</a></li>
                     <li><a href="./Contact.html">Contact</a></li>
                     <li><a href="./About.html">About</a></li>
@@ -62,21 +66,32 @@
                 </ul>
             </nav>
         </header>
-        
-        <div id="content">
-            <section>
-                <div class="cart_item">
-                    <p>
-                        Giỏ hàng của bạn đang trống !</p>
-                </div>
-                <div class="img_news">
-                    <h3>Đơn hàng</h3>
-                    <div class="continue_buy">
-                        <button><a href="./shop.html"><b>Tiếp tục mua hàng</b></a></button>
-                    </div>
-                </div>
-            </section>
+
+        <div class="container">
+            <main class="main_cell">
+
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <h1>CHI TIẾT ĐƠN HÀNG</h1>
+                        </tr>
+                    </thead>
+
+                    <tbody id="tbody-table">
+
+
+                    </tbody>
+
+
+                    <tfoot id="tfoot-table">
+
+                    </tfoot>
+
+                </table>
+
+            </main>
         </div>
     </main>
 </body>
+
 </html>

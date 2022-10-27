@@ -7,6 +7,12 @@ var Slider = document.querySelector('.container');
 var NavChild = document.querySelector('.nav_body');
 var List = document.querySelector('.list');
 var system = document.querySelector('.System');
+var buyNow = document.querySelectorAll('#buy_now');
+var buyLater = document.querySelectorAll('#buy_later');
+var cart = document.querySelector('.cart');
+var cartIcon = document.querySelector('.cart_icon');
+var cartContainer = document.querySelector('.cart_container');
+
 
 
 function ShowIcon() {
@@ -68,7 +74,7 @@ leftIcon.addEventListener('click',function() {
 })
 
 
-var endsale = new Date("November 15 , 2022 00:00:00").getTime()
+var endsale = new Date("November 03 , 2022 00:00:00").getTime()
 setInterval(function(){
     var beginSale = new Date().getTime();
     var endGame = endsale - beginSale;
@@ -90,4 +96,33 @@ setInterval(function(){
 
 List.addEventListener('click',() => {
     system.classList.toggle('hide')
+})
+
+/*add cart*/
+
+for(let i = 0 ; i < buyNow.length ; i++) {
+    buyNow[i].addEventListener('click',function(){
+        alert('Thêm vào vỏ hàng cái đi rồi mua gấp gáp gì đâu -_-');
+    })
+}
+
+function HideCart() {
+    cart.classList.add('hideCart')
+}
+
+function ShowCart() {
+    cart.classList.toggle('hideCart')
+}
+
+
+cartIcon.addEventListener('click',function() {
+    ShowCart()
+})
+
+cart.addEventListener('click',function() {
+    HideCart();
+})
+
+cartContainer.addEventListener('click',function(e) {
+    e.stopPropagation();
 })

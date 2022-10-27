@@ -301,3 +301,93 @@ header .sub_nav li:hover {
 header .Shop_parent:hover  .sub_nav{
     display: block;
 }
+
+header .cart_icon span {
+    font-size: 15px;
+    text-decoration: none;
+    position: absolute;
+    top: -5px;
+}
+
+.cart {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+    display: flex;
+    justify-content: flex-end;     
+}
+
+.cart .cart_product {
+    margin-top: 30px;
+}
+
+.cart .header_cart{
+    margin-top: 10px;
+    text-align: center;
+}
+
+/*Sản phẩm*/
+.cart .cart_pd {
+    margin: 8px 0px 5px 13px;
+    font-style: italic;
+    font-weight: 400;
+    display: block;
+}
+
+.cart .cart_product img {
+    width: 30%;
+    margin-left: 30px;
+}
+
+.cart .cart_product h4 {
+    width: 100px;
+}
+
+.cart .cart_container {
+    background-color: white;
+    width: 40%;
+    animation: moveCart ease 0.52s;  
+}
+
+
+.hideCart {
+    display: none;
+}
+
+.cart .cart_product input[type=number] {
+    width: 40%;
+    margin: auto;
+}
+
+.cart .cart_product .delete {
+    text-align: center;
+    font-size: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+@keyframes moveCart {
+    from{
+        transform: translateX(820px);
+        opacity: 0;
+    }to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.title_sp{
+    text-align: center;
+    margin: 10px 0px;
+}
+
+table{
+
+    margin: auto;
+    text-align: center;
+    margin-top: 10px;
+}
