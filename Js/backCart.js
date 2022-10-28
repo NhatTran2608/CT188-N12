@@ -20,37 +20,37 @@ function addCart(code)
 function showCart()
 {
 	var itemList={
-	"sp001":{	"name":"MacBook Air M1 2020 7-core GPU", 
-				"price":28499000,
+	"sp001":{	"name":"Iphone 13 ProMax", 
+				"price":27490000,
 				"photo":"./img/iphone13 pro max.webp"},
 	
-	// "sp002":{	"name":"MacBook Pro M1 2020", 
-	// 			"price":39990000,
-	// 			"photo":"images/sanpham/macbook-pro-m1-2020-gray-600x600.jpg"},
+	"sp002":{	"name":"Iphone 13 Pro", 
+				"price":26900000,
+				"photo":"./img/iphone 13 pro.webp"},
 	
-	// "sp003":{	"name":"MacBook Pro 16 M1 Pro 2021/16 core-GPU", 
-	// 			"price":46490000,
-	// 			"photo":"images/sanpham/apple-macbook-pro-16-m1-pro-2021-10-core-cpu-600x600.jpg"},
+	"sp003":{	"name":"Iphone 13", 
+				"price":19490000,
+				"photo":"./img/iphone 13.webp"},
 	
-	// "sp004":{	"name":"HP Gaming VICTUS 16 e0170AX R7 5800H (4R0U7PA)", 
-	// 			"price":18990000,
-	// 			"photo":"images/sanpham/hp-gaming-victus-16-e0170ax-r7-4r0u7pa-600x600.jpg"},
+	"sp004":{	"name":"Iphone 13 Mini", 
+				"price":16990000,
+				"photo":"./img/iphone 13 mini.webp"},
 				
-	// "sp005":{	"name":"HP 245 G8 R3 5300U (63T27PA)", 
-	// 			"price":18790000,
-	// 			"photo":"images/sanpham/hp-245-r3-5300u-4gb-256gb-win11-63t27pa-600x600.jpg"},
+	"sp005":{	"name":"Iphone 14 Pro Max 128GB", 
+				"price":31990000,
+				"photo":"./img/iphone 14 plus.webp"},
 				
-	// "sp006":{	"name":"HP ZBook Firefly 14 G8 i5 1135G7 (275V5AV)", 
-	// 			"price":31990000,
-	// 			"photo":"images/sanpham/hp-zbook-firefly-14-g8-i5-275v5av-141221-042207-600x600.jpg"},
+	"sp006":{	"name":"Iphone 14 Pro", 
+				"price":27990000,
+				"photo":"./img/iphone 14 pro.webp"},
 				
-	// "sp007":{	"name":"MacBook Air M1 2020 7-core GPU", 
-	// 			"price":24990000,
-	// 			"photo":"images/sanpham/asus-tuf-gaming-fx506lh-i5-hn188w-120122-121947-600x600.jpg"},
+	"sp007":{	"name":"Iphone 14 Plus", 
+				"price":26790000,
+				"photo":"./img/iphone 14 plus.webp"},
 				
-	// "sp008":{	"name":"Asus ROG Strix Gaming G513IH R7 4800H (HN015W)", 
-	// 			"price":26099000,
-	// 			"photo":"images/sanpham/asus-rog-strix-gaming-g513ih-r7-4800h-8gb-512gb-4gb-600x600.jpg"},
+	"sp008":{	"name":"Iphone 14", 
+				"price":20990000,
+				"photo":"./img/iphone 14.webp"},
 				
 	// "sp009":{	"name":"Asus ZenBook UX425EA i5 1135G7 (KI839W)", 
 	// 			"price":20199000,
