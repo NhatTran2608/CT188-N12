@@ -307,7 +307,14 @@ header .cart_icon span {
     text-decoration: none;
     position: absolute;
     top: -5px;
+    
 }
+/* header .cart_icon span{
+    background-color: #ccc;
+    border-radius: 15px;
+    padding: 0px 5px;
+} */
+
 
 .cart {
     position: fixed;
@@ -380,14 +387,11 @@ header .cart_icon span {
     }
 }
 
-.title_sp{
-    text-align: center;
-    margin: 10px 0px;
+.total {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
 }
-
-table{
-
-    margin: auto;
+.wrapper{
     text-align: center;
-    margin-top: 10px;
 }

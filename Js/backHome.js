@@ -12,7 +12,8 @@ var buyLater = document.querySelectorAll('#buy_later');
 var cart = document.querySelector('.cart');
 var cartIcon = document.querySelector('.cart_icon');
 var cartContainer = document.querySelector('.cart_container');
-
+var closeCart  = document.querySelector('.close');
+var NumCart = document.querySelector(".cartNum span")
 
 
 function ShowIcon() {
@@ -74,7 +75,7 @@ leftIcon.addEventListener('click',function() {
 })
 
 
-var endsale = new Date("November 03 , 2022 00:00:00").getTime()
+var endsale = new Date("November 25 , 2022 00:00:00").getTime()
 setInterval(function(){
     var beginSale = new Date().getTime();
     var endGame = endsale - beginSale;
@@ -106,6 +107,7 @@ for(let i = 0 ; i < buyNow.length ; i++) {
     })
 }
 
+/*Show and Hide Cart*/
 function HideCart() {
     cart.classList.add('hideCart')
 }
@@ -113,7 +115,6 @@ function HideCart() {
 function ShowCart() {
     cart.classList.toggle('hideCart')
 }
-
 
 cartIcon.addEventListener('click',function() {
     ShowCart()
@@ -126,3 +127,77 @@ cart.addEventListener('click',function() {
 cartContainer.addEventListener('click',function(e) {
     e.stopPropagation();
 })
+
+/*Add cart */
+buyLater.forEach(function(button, index) {
+    button.addEventListener('click',function(e) {{
+        var btnItem = e.target
+        var productItem = btnItem.parentElement.parentElement.parentElement
+        var productImg = productItem.querySelector('img').src
+        var productName = productItem.querySelector('h3').innerText
+        var productPrice = productItem.querySelector(".cost_phone b").innerText
+        addCart(productPrice,productImg,productName)
+    }})
+})
+
+closeCart.addEventListener('click',function() {
+    cart.classList.add('hideCart')
+})
+
+function addCart(productPrice,productImg,productName) {
+    var addtr = document.createElement("tr")
+    var trContent = `
+            <tr>    
+            <td><img class="cart_pd" src="${productImg}" alt=""></td>
+            <td><b class="cart_pd cart_name">${productName}</b></td>
+            <td><span class="prices">${productPrice}</span></td>
+            <td><input type="number" value="1" id="input_number" class="cart_pd"></input></td>
+            <td><i class='bx bx-x delete cart_pd'></i></td>
+        </tr>
+    `
+    addtr.innerHTML = trContent
+    var cartTable = document.querySelector("tbody")
+    cartTable.append(addtr)
+    deleteProduct()
+    cartTotal()
+}
+
+function cartTotal() {
+    var cartItem = document.querySelectorAll("tbody tr")
+    var mul = 0
+    for(var i = 0 ; i < cartItem.length ; i++) {
+        var inputValue = cartItem[i].querySelector("input").value
+        var productPrice = cartItem[i].querySelector(".prices").innerHTML
+        productPrice = parseFloat(productPrice)
+        totalA = inputValue * productPrice * 1000000
+        mul = mul + totalA
+    }
+    var totalNumber = document.querySelector('.total_cost span')
+    totalNumber.innerHTML = mul.toLocaleString("de-DE")
+    NumCart.innerText = cartItem.length
+    increaseNumCart();
+    
+}
+
+function deleteProduct() {
+    var cartItem = document.querySelectorAll('tbody tr')
+    for(let i = 0 ; i < cartItem.length ; i++) {
+        var deleteIcon = document.querySelectorAll('.delete')
+        deleteIcon[i].addEventListener('click',function(e) {
+            var locationDelete = e.target
+            var products = locationDelete.parentElement.parentElement
+            products.remove();
+            cartTotal();
+        })
+    }
+}
+
+function increaseNumCart() {
+    var cartItem = document.querySelectorAll('tbody tr')
+    for(let i = 0 ; i < cartItem.length ; i++) {
+        var inputNum = cartItem[i].querySelector('input')
+        inputNum.addEventListener('change',function() {
+            cartTotal()
+        })
+    }
+}

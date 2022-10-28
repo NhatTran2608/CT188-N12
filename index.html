@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,23 +8,20 @@
     <title>Burh Shop</title>
     <link rel="stylesheet" href="img/">
     <link rel="icon" href="./bxs-smile.svg">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="Shop/assetShop.css">
     <link rel="stylesheet" href="./Css/Home/assetHome.css">
-    <script src="Js/backCart.js"></script>
+    <script src="./Js/backHome.js"></script>
     
+
 </head>
-<body onload="showCart();">
+
+<body>
     <main>
         <header>
             <div class="frist_header">
-                <div>
-                    <a href="#"><img class="logo_CH" src="img/logo_CH.jpg" alt="" ></a>
-                </div>
-
                 <div class="number_phone line_H">
-                    
                     <p>
                         <i class='bx bxs-phone phone'></i> 
                         0373357405</p>
@@ -43,38 +41,42 @@
                     </span>
                     <span class="cart_icon">
                         <a href="#">
-                            <i class='bx bx-cart'><span>0</span></i>
+                            <i class='bx bx-cart cartNum'><span>0</span></i>
                         </a>
                     </span>
                 </span>
             </div>
-            
+
             <div class="cart hideCart">
                 <div class="cart_container">
                     <div class="cart_about">
-                        <div class="container">
-                            <div class="main_cell">
-                
-                                <table border="1">
-                                    <thead>
-                                        <tr>
-                                            <h3 class="title_sp">CHI TIẾT ĐƠN HÀNG</h3>
-                                        </tr>
-                                    </thead>
-                
-                                    <tbody id="tbody-table">
-                
-                
-                                    </tbody>
-
-                                    <tfoot id="tfoot-table">
-                
-                                    </tfoot>
-                
-                                </table>
-                                
+                        <h3 class="header_cart">Giỏ Hàng
+                            <i class='bx bx-x close'></i>
+                        </h3>
+                        <div class="cart_product">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th><h4>Hình ảnh</h4></th>
+                                        <th><h4>Sản phẩm</h4></th>
+                                        <th><h4>Giá</h4></th>
+                                        <th><h4>Số lượng</h4></th>
+                                        <th><h4>Chọn</h4></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!--<tr>
+                                        <td><img class="cart_pd" src="./img/iphone 13 mini.webp" alt=""></td>
+                                        <td><b class="cart_pd">Iphone 14</b></td>
+                                        <td><p class="cart_pd">27.990.000<u>đ</u></p></td>
+                                        <td><input type="number" class="cart_pd"></input></td>
+                                        <td><i class='bx bx-x delete cart_pd'></i></td>
+                                    </tr>-->
+                                </tbody>
+                            </table>
+                            <div class="total">
+                                <b class="total_cost">Tổng chi phí: <span>0</span> <u>đ</u></b>
                             </div>
-                        </div>
                         </div>
                     </div>
                 </div>
@@ -101,10 +103,7 @@
         <div id="slider">
             <div class="container" >
                 <div class="wrapper">
-                    <div class="slider-edit">
-                        <img src="./img/img0.webp" alt="" id="img_phone">
-                    </div>
-                    
+                    <img src="./img/img0.webp" alt="" id="img_phone">
                     <div class="button_click">
                          <button onclick="imageClick()" class="click1"></button>
                          <button onclick="imageClick1()" class="click2"></button>
@@ -119,6 +118,8 @@
                 </div>
             </div>
         </div>
+
+        
 
         <div id="content">
             <!--Content container-->
@@ -187,13 +188,13 @@
                         <i class='bx bxs-chevron-down'></i>
                     </button>
                     <ul class="System hide">
-                        <li><a href="#">Androi</a></li>
+                        <li><a href="#">Android</a></li>
                         <li><a href="#">IOS</a></li>
                     </ul>
                 </div>
                  <!--End List System-->
                  <!--list product-->
-                 <div class="card_product">
+                <div class="card_product">
                     <!--Product list--> 
                     <div class="list_product">
                         <div class="product_container">
@@ -201,7 +202,7 @@
                                 <img src="./img/iphone13 pro max.webp" alt="" class="img_iphone">
                             </div>
                             <div class="body_phone">
-                                <h3>Iphone 13 Pro Max</h3>
+                                <h3 class="name_product">Iphone 13 Pro Max</h3>
                             <div class="Gb_phone">
                                 <span>128GB</span>
                                 <span>256GB</span>
@@ -210,7 +211,7 @@
                             </div>
     
                             <div class="cost">
-                               <span class="cost_phone"><b>27.490.000</b><u>đ</u></span> 
+                               <span class="cost_phone"><b>27.990.000</b><u>đ</u></span> 
                                <span class="text_decor"><strike>33.990.000</strike><u>đ</u></span>
                             </div>
                 
@@ -244,9 +245,8 @@
                                     </span>
                                 </div>
                                 <div class="footer_product">
-                                    <span> Số lượng: <input type="number" value="1" id="sp001" min="0" max="100" size="3" value="0" >
-                                        <input type="button" value="Đặt hàng" onclick="addCart('sp001'), location.reload();">
-                                    </span>
+                                    <button id="buy_now">Mua Liền</button>
+                                    <button id="buy_later">Xíu Mua</button>
                                 </div>
                             </div>
                         </div>        
@@ -258,15 +258,15 @@
                                 <img src="./img/iphone 13 pro.webp" alt="" class="img_iphone">
                             </div>
                             <div class="body_phone">
-                                <h3>Iphone 13 Pro</h3>
+                                <h3 class="name_product">Iphone 13 Pro</h3>
                             <div class="Gb_phone">
                                 <span>128GB</span>
                                 <span>256GB</span>
                             </div>
     
                             <div class="cost">
-                               <span class="cost_phone"><b>26.900.000</b><u>đ</u></span> 
-                               <span class="text_decor"><strike>27.490.000</strike><u>đ</u></span>
+                               <span class="cost_phone"><b>24.490.000</b><u>đ</u></span> 
+                               <span class="text_decor"><strike>30.990.000</strike><u>đ</u></span>
                             </div>
                 
                                 
@@ -299,9 +299,8 @@
                                     </span>
                                 </div>
                                 <div class="footer_product">
-                                    <span> Số lượng: <input type="number" value="1" id="sp002" min="0" max="100" size="3" value="0" >
-                                        <input type="button" value="Đặt hàng" onclick="addCart('sp002'), location.reload();">
-                                    </span>
+                                    <button id="buy_now">Mua Liền</button>
+                                    <button id="buy_later">Xíu Mua</button>
                                 </div>
                             </div>
                         </div>        
@@ -313,7 +312,7 @@
                                 <img src="./img/iphone 13.webp" alt="" class="img_iphone">
                             </div>
                             <div class="body_phone">
-                                <h3>Iphone 13</h3>
+                                <h3 class="name_product">Iphone 13</h3>
                             <div class="Gb_phone">
                                 <span>128GB</span>
                                 <span>256GB</span>
@@ -321,8 +320,8 @@
                             </div>
     
                             <div class="cost">
-                               <span class="cost_phone"><b>19.490.000</b><u>đ</u></span> 
-                               <span class="text_decor"><strike>20.990.000</strike><u>đ</u></span>
+                               <span class="cost_phone"><b>18.990.000</b><u>đ</u></span> 
+                               <span class="text_decor"><strike>33.990.000</strike><u>đ</u></span>
                             </div>
                 
                                 
@@ -355,9 +354,8 @@
                                     </span>
                                 </div>
                                 <div class="footer_product">
-                                    <span> Số lượng: <input type="number" value="1" id="sp003" min="0" max="100" size="3" value="0" >
-                                        <input type="button" value="Đặt hàng" onclick="addCart('sp003'), location.reload();">
-                                    </span>
+                                    <button id="buy_now">Mua Liền</button>
+                                    <button id="buy_later">Xíu Mua</button>
                                 </div>
                             </div>
                         </div>        
@@ -369,10 +367,10 @@
                                 <img src="./img/iphone 13 mini.webp" alt="" class="img_iphone">
                             </div>
                             <div class="body_phone">
-                                <h3>Iphone 13 Mini</h3>  
+                                <h3 class="name_product">Iphone 13 mini</h3>  
                             <div class="cost mar_top">
                                <span class="cost_phone"><b>16.990.000</b><u>đ</u></span> 
-                               <span class="text_decor"><strike>17.990.000</strike><u>đ</u></span>
+                               <span class="text_decor"><strike>33.990.000</strike><u>đ</u></span>
                             </div>
                 
                                 
@@ -405,9 +403,8 @@
                                     </span>
                                 </div>
                                 <div class="footer_product">
-                                    <span> Số lượng: <input type="number" value="1" id="sp004" min="0" max="100" size="3" value="0" >
-                                        <input type="button" value="Đặt hàng" onclick="addCart('sp004'), location.reload();">
-                                    </span>
+                                    <button id="buy_now">Mua Liền</button>
+                                    <button id="buy_later">Xíu Mua</button>
                                 </div>
                             </div>
                         </div>        
@@ -418,10 +415,10 @@
                  <div class="list_product">
                     <div class="product_container">
                         <div class="iphone">
-                            <img src="./img/iphone 14 plus.webp" alt="" class="img_iphone">
+                            <img src="./img/iphone 14 pro max.webp" alt="" class="img_iphone">
                         </div>
                         <div class="body_phone">
-                            <h3>Iphone 14 Pro Max 128GB</h3>  
+                            <h3 class="name_product">Iphone 14 Pro Max</h3>  
                             <div class="Gb_phone">
                                 <span>128GB</span>
                                 <span>256GB</span>
@@ -429,7 +426,7 @@
                                 <span>1TB</span>
                             </div>
                         <div class="cost">
-                           <span class="cost_phone"><b>31.990.000</b><u>đ</u></span> 
+                           <span class="cost_phone"><b>33.990.000</b><u>đ</u></span> 
                            <span class="text_decor">2.955.000<u>đ</u>/tháng</span>
                         </div>
             
@@ -463,9 +460,8 @@
                                 </span>
                             </div>
                             <div class="footer_product">
-                                <span> Số lượng: <input type="number" value="1" id="sp005" min="0" max="100" size="3" value="0" >
-                                    <input type="button" value="Đặt hàng" onclick="addCart('sp005'), location.reload();">
-                                </span>
+                                <button id="buy_now">Mua Liền</button>
+                                <button id="buy_later">Xíu Mua</button>
                             </div>
                         </div>
                     </div>        
@@ -479,7 +475,7 @@
                         <img src="./img/iphone 14 pro.webp" alt="" class="img_iphone">
                     </div>
                     <div class="body_phone">
-                        <h3>Iphone 14 Pro</h3>  
+                        <h3 class="name_product">Iphone 14 Pro</h3>  
                         <div class="Gb_phone">
                             <span>128GB</span>
                             <span>256GB</span>
@@ -487,8 +483,8 @@
                             <span>1TB</span>
                         </div>
                     <div class="cost">
-                       <span class="cost_phone"><b>27.990.000</b><u>đ</u></span> 
-                       <span class="text_decor">2.580.000<u>đ</u>/tháng</span>
+                       <span class="cost_phone"><b>30.990.000</b><u>đ</u></span> 
+                       <span class="text_decor">2.687.500<u>đ</u>/tháng</span>
                     </div>
         
                         
@@ -521,9 +517,8 @@
                             </span>
                         </div>
                         <div class="footer_product">
-                            <span> Số lượng: <input type="number" value="1" id="sp006" min="0" max="100" size="3" value="0" >
-                                <input type="button" value="Đặt hàng" onclick="addCart('sp006'), location.reload();">
-                            </span>
+                            <button id="buy_now">Mua Liền</button>
+                            <button id="buy_later">Xíu Mua</button>
                         </div>
                     </div>
                 </div>        
@@ -537,14 +532,14 @@
                     <img src="./img/iphone 14 plus.webp" alt="" class="img_iphone">
                 </div>
                 <div class="body_phone">
-                    <h3>Iphone 14 Plus</h3>  
+                    <h3 class="name_product">Iphone 14 Plus</h3>  
                     <div class="Gb_phone">
                         <span>128GB</span>
                         <span>256GB</span>
                         <span>512GB</span>
                     </div>
                 <div class="cost">
-                   <span class="cost_phone"><b>26.790.000</b><u>đ</u></span> 
+                   <span class="cost_phone"><b>27.990.000</b><u>đ</u></span> 
                    <span class="text_decor">2.464.500<u>đ</u>/tháng</span>
                 </div>
     
@@ -578,9 +573,8 @@
                         </span>
                     </div>
                     <div class="footer_product">
-                        <span> Số lượng: <input type="number" value="1" id="sp007" min="0" max="100" size="3" value="0" >
-                            <input type="button" value="Đặt hàng" onclick="addCart('sp007'), location.reload();">
-                        </span>
+                        <button id="buy_now">Mua Liền</button>
+                        <button id="buy_later">Xíu Mua</button>
                     </div>
                 </div>
             </div>        
@@ -594,14 +588,14 @@
                 <img src="./img/iphone 14.webp" alt="" class="img_iphone">
             </div>
             <div class="body_phone">
-                <h3>Iphone 14</h3>  
+                <h3 class="name_product">Iphone 14</h3>  
                 <div class="Gb_phone">
                     <span>128GB</span>
                     <span>256GB</span>
                     <span>512GB</span>
                 </div>
             <div class="cost">
-               <span class="cost_phone"><b>20.990.000</b><u>đ</u></span> 
+               <span class="cost_phone"><b>24.990.000</b><u>đ</u></span> 
                <span class="text_decor">2.197.000<u>đ</u>/tháng</span>
             </div>
 
@@ -635,9 +629,8 @@
                     </span>
                 </div>
                 <div class="footer_product">
-                    <span> Số lượng: <input type="number" value="1" id="sp008" min="0" max="100" size="3" value="0" >
-                        <input type="button" value="Đặt hàng" onclick="addCart('sp008'), location.reload();">
-                    </span>
+                    <button id="buy_now">Mua Liền</button>
+                    <button id="buy_later">Xíu Mua</button>
                 </div>
             </div>
         </div>        
@@ -656,6 +649,8 @@
                 <br>
             </div>
         </div>
+
+            
 
         <footer>
             <div class="border"></div>
@@ -703,7 +698,10 @@
                 </div>
             </div>
         </footer>
+
+        
     </main>
-    <script src="./Js/backHome.js"></script>
+    
 </body>
+<script src="./Js/backHome.js"></script>
 </html>
