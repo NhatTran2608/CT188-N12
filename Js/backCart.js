@@ -20,7 +20,7 @@ function addCart(code)
 function showCart()
 {
 	var itemList={
-	"sp001":{	"name":"Iphone 14 Promax", 
+	"sp001":{	"name":"MacBook Air M1 2020 7-core GPU", 
 				"price":28499000,
 				"photo":"./img/iphone13 pro max.webp"},
 	
@@ -101,7 +101,6 @@ function showCart()
 	icon.id=key;
 	del.appendChild(icon);
 	icon.innerHTML="<i onclick=removeCart(\'"+key+"\') id='del' style='color:red;' class='fa fa-trash icon-pink'></i>"
-	
 	
 	tr.appendChild(picture);
 	tr.appendChild(product);

@@ -14,7 +14,7 @@
     <script src="Js/backCart.js"></script>
     
 </head>
-<body onload="showCart()">
+<body onload="showCart();">
     <main>
         <header>
             <div class="frist_header">
@@ -66,14 +66,13 @@
                 
                 
                                     </tbody>
-                
-<!--                 
+
                                     <tfoot id="tfoot-table">
                 
-                                    </tfoot> -->
+                                    </tfoot>
                 
                                 </table>
-                
+                                
                             </div>
                         </div>
                         </div>
@@ -246,7 +245,7 @@
                                 </div>
                                 <div class="footer_product">
                                     <span> Số lượng: <input type="number" value="1" id="sp001" min="0" max="100" size="3" value="0" >
-                                        <input type="button" value="Đặt hàng" onclick="addCart('sp001')">
+                                        <input type="button" value="Đặt hàng" onclick="addCart('sp001'), location.reload();">
                                     </span>
                                 </div>
                             </div>
