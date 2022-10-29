@@ -309,11 +309,11 @@ header .cart_icon span {
     top: -5px;
     
 }
-/* header .cart_icon span{
+header .cart_icon span{
     background-color: #ccc;
     border-radius: 15px;
     padding: 0px 5px;
-} */
+}
 
 
 .cart {

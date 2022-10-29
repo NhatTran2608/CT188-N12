@@ -152,7 +152,7 @@ function addCart(productPrice,productImg,productName) {
             <td><b class="cart_pd cart_name">${productName}</b></td>
             <td><span class="prices">${productPrice}</span></td>
             <td><input type="number" value="1" id="input_number" class="cart_pd"></input></td>
-            <td><i class='bx bx-x delete cart_pd'></i></td>
+            <td><i  style='color:red;' class='bx bx-x delete cart_pd'></i></td>
         </tr>
     `
     addtr.innerHTML = trContent
