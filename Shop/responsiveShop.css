@@ -1,0 +1,60 @@
+/*Ipad dọc(768 x 1024)*/
+@media only screen and (min-width: 740px) and (max-width:1023px) {
+
+
+
+}
+
+
+
+
+
+/*Iphone(480 x 640)*/
+@media only screen and (max-width: 739px) {
+    header{
+        height: 40px;
+    }
+    header .frist_header{
+        display: grid;
+        align-items: center;
+        box-shadow: 2px 0px 4px rgb(125 134 138 / 60%);
+        position: fixed;
+        left: 0;
+        right: 0;
+        background-color: #dadada;
+    }
+
+    nav{
+        padding-top: 150px;
+        height: 40px;
+    }
+
+    .wrapper{
+        margin-top: 100px;
+        text-align: center;
+    }
+
+    #slider img {
+        width: 90%;
+        height: 150px;
+        border-radius: 10px;
+    }
+    
+    #slider .control i {
+        font-size: 20px;
+        
+    }
+
+    #slider .control.next {
+        right: 50px;
+        
+    }
+    #slider .control.prev {
+        left: 50px;
+       
+    }
+
+}
+
+
+

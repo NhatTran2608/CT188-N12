@@ -92,6 +92,10 @@ header .frist_header {
     justify-content: space-between;
     align-items: center;
     box-shadow: 2px 0px 4px rgba(125, 134, 138, 0.6);
+    position: fixed;
+    left: 0;
+    right: 0;
+    background-color: #dadada;
 }
 
 header .search_icon input{
@@ -144,6 +148,7 @@ header .number_phone i{
 /*Child NAV*/
 
 nav {
+    padding-top: 80px;
     height: 50px;  
 }
 
