@@ -2,11 +2,7 @@
 @media only screen and (min-width: 740px) and (max-width:1023px) {
 
 
-
 }
-
-
-
 
 
 /*Iphone(480 x 640)*/
@@ -20,7 +16,7 @@
         position: fixed;
         left: 0;
         right: 0;
-        background-color: #dadada;
+        background-color: #fff;
         padding: 10px 0px;
     }
 
@@ -39,7 +35,7 @@
     .cart .cart_container {
         width: 80%;
     }
- 
+
     nav{
         padding-top: 120px;
         height: 40px;
@@ -81,5 +77,22 @@
     header .icon_shop {
         margin-right: 50px;
     }
+
+    .total {
+        margin-top: 50px;
+    }
+
+    #content .about_content{
+        display: grid;
+        grid-template-columns: repeat(1, 2fr);
+
+    }
+
+    #content .collums {
+        margin: auto;
+        text-align: center;
+        padding: 15px;
+    }
+
 
 }

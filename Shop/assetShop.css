@@ -95,7 +95,8 @@ header .frist_header {
     position: fixed;
     left: 0;
     right: 0;
-    background-color: #dadada;
+    background-color: #fff;
+    z-index: 2;
 }
 
 header .search_icon input{
