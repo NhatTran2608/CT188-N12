@@ -9,6 +9,7 @@ var List = document.querySelector('.list');
 var system = document.querySelector('.System');
 var buyNow = document.querySelectorAll('#buy_now');
 var buyLater = document.querySelectorAll('#buy_later');
+
 var cart = document.querySelector('.cart');
 var cartIcon = document.querySelector('.cart_icon');
 var cartContainer = document.querySelector('.cart_container');
@@ -128,6 +129,10 @@ cartContainer.addEventListener('click',function(e) {
     e.stopPropagation();
 })
 
+closeCart.addEventListener('click',function() {
+    cart.classList.add('hideCart')
+})
+
 /*Add cart */
 buyLater.forEach(function(button, index) {
     button.addEventListener('click',function(e) {{
@@ -140,11 +145,9 @@ buyLater.forEach(function(button, index) {
     }})
 })
 
-closeCart.addEventListener('click',function() {
-    cart.classList.add('hideCart')
-})
 
-function addCart(productPrice,productImg,productName) {
+
+/*function addCart(productPrice,productImg,productName) {
     var addtr = document.createElement("tr")
     var trContent = `
             <tr>    
@@ -169,14 +172,13 @@ function cartTotal() {
         var inputValue = cartItem[i].querySelector("input").value
         var productPrice = cartItem[i].querySelector(".prices").innerHTML
         productPrice = parseFloat(productPrice)
-        totalA = inputValue * productPrice * 1000000
+        totalA = inputValue * prodsuctPrice * 1000000
         mul = mul + totalA
     }
     var totalNumber = document.querySelector('.total_cost span')
     totalNumber.innerHTML = mul.toLocaleString("de-DE")
     NumCart.innerText = cartItem.length
     increaseNumCart();
-    
 }
 
 function deleteProduct() {
@@ -200,4 +202,8 @@ function increaseNumCart() {
             cartTotal()
         })
     }
-}
+}*/
+
+$('.shop_name i').click(function() {
+    $('html, body').animate({ scrollTop : 0}, 'slow')
+})

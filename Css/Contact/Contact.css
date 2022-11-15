@@ -26,8 +26,8 @@
 }
 
 #contact .container_contact iframe{
-    width: 1144px;
-    height: 500px;
+    width: 100%;
+    /* height: 500px; */
 }
 
 #contact .contact_section {
@@ -83,7 +83,8 @@
 
 #contact .info_contact {
     
-    width: 575px;
+    width: 100%;
+    margin-left: 50px;
 }
 
 #contact .info_contact i {

@@ -1,7 +1,30 @@
 /*Ipad dọc(768 x 1024)*/
 @media only screen and (min-width: 740px) and (max-width:1023px) {
+    #content .card_product{
+        grid-template-columns: repeat(3, 1fr); 
+    }
+    footer .footer_container {
+        padding: 30px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .line_text_footer{
+        text-align: center;
+        margin: auto;
 
+    }
+    .line_text_footer p{
+        text-align: left;
+        margin: auto;
+    }
 
+    .shop_img{
+        margin-top: 50px;
+    }
+
+    #content .card_product {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 
@@ -54,10 +77,8 @@
         text-align: center;
     }
 
-    #slider img {
-        width: 90%;
-        height: 150px;
-        border-radius: 10px;
+    #slider .shop_img {
+        display: none;
     }
     
     #slider .control i {
@@ -74,18 +95,12 @@
        
     }
 
-    header .icon_shop {
-        margin-right: 50px;
-    }
-
     .total {
         margin-top: 50px;
     }
 
-    #content .about_content{
-        display: grid;
-        grid-template-columns: repeat(1, 2fr);
-
+    #content .card_product{
+        grid-template-columns: repeat(2, 1fr); 
     }
 
     #content .collums {
@@ -94,5 +109,65 @@
         padding: 15px;
     }
 
+    .shop_name h1{
+        margin-right: 45px;
+    }
 
+    nav .nav_body > li {
+        padding: 10px;
+    }
+
+    #content{
+        margin: 20px;
+    }
+
+    #content .list_product {
+        transform: scale(1.02);
+        transition: 0.1;
+    }
+    #content .body_child img {
+        width: 18px;
+        margin-top: 25px;
+        margin-left: 18px;
+    }
+
+    #content .cost_phone {
+        padding: 2px 12px;
+    }
+
+    footer .footer_container {
+        padding: 30px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #content .container {
+        display: grid;
+        grid-template-columns: none;
+        margin-top: 50px;
+    }
+
+    #content .list_products {
+        display: none;
+    }
+
+    .text_shop{
+        text-align: center;
+        margin: auto;
+        margin-top: 150px;
+        display: block;
+    }
+
+    .text_shop {
+        border: 1px solid;
+        padding: 10px;
+        box-shadow: 2px 5px #888888;
+    }
+
+    .img_apple{
+        width: 35px;
+        margin-top: px;
+    }
+      
+   
 }

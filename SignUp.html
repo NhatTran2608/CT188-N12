@@ -1,134 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đăng ký</title>
-    <link rel="stylesheet" href="img/">
-    <link rel="stylesheet" href="Shop/assetShop.css">   
-    <link rel="stylesheet" href="Css/Login/Login.css"> 
-    <link rel="stylesheet" href="./Css/SignUp/assetSignUp.css">
+    <link rel="stylesheet" href="Css/SignUp/assetSignUp.css">
     <link rel="icon" href="./bxs-smile.svg">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
 </head>
-
 <body>
     <main>
-        <header>
-            <div class="frist_header">
-                <div>
-                    <a href="./index.html"><img class="logo_CH" src="img/logo_CH.jpg" alt="" ></a>
-                </div>
-
-                <div class="number_phone line_H">
-                    <p>
-                        <i class='bx bxs-phone phone'></i>
-                        0373357405
-                    </p>
-                </div>
-                <div class="shop_name">
-                    <h1>BURHSHOP
-                        <i class='bx bx-smile'></i>
-                    </h1>
-                </div>
-                <span class="icon_shop margin_20px">
-                    <span class="search_icon">
-                        <input class="search_input hide" type="text" placeholder="Tìm kiếm...">
-                        <i class='bx bx-search search'></i>
-                    </span>
-                    <span class="user_icon">
-                        <i class='bx bx-user'></i>
-                    </span>
-                    <span class="cart_icon">
-                        <a href="./cart.html"><i class='bx bx-cart'></i></a>
-                    </span>
-                </span>
-            </div>
-
-            <nav>
-                <ul class="nav_body">
-                    <li><a href="/index.html">Home</a></li>
-                    <li class="Shop_parent"><a href="./shop.html">Shop<i class='bx bx-chevron-down'></i>
-                            <ul class="sub_nav">
-                                <li><a href="./shop.html">Apple</a></li>
-                                <li><a href="./androi.html">Androi</a></li>
-                                <li><a href="./accessory.html">Phụ kiện</a></li>
-                            </ul>
-                        </a></li>
-                    <li><a href="./blog.html">Blog</a></li>
-                    <li><a href="./Contact.html">Contact</a></li>
-                    <li><a href="./About.html">About</a></li>
-                    <li><a href="./login.html">Login</a></li>
-                </ul>
-            </nav>
-        </header>
-
         <div id="sign_up">
-            <div class="form_sign">
+            <h1>Đăng Ký</h1>
                 <form action="">
-                    <h3>Tạo tài khoản</h3>
-                    <input type="text" name="fullname" required placeholder="Họ và tên" class="form_control"><br>
-                    <input type="text" name="number" required placeholder="Số điện thoại" class="form_control"><br>
-                    <input type="email" name="email" required placeholder="Nhập email" class="form_control"><br>
-                    <input type="password" name="password" required placeholder="Mật khẩu" class="form_control"><br>
-                    <input type="password" name="password_confirmation" required placeholder="Nhập lại mật khẩu"
-                        class="form_control"><br>
-                    <button>Tạo</button>
-                </form>
-            </div>
+                    <div class="form-control">
+                        <input type="text" id="username" placeholder="Họ và Tên"/>
+                        <span></span>
+                        <small></small>
+                      </div>
+                      <div class="form-control">
+                        <input type="email" id="email" placeholder="Email" />
+                        <span></span>
+                        <small></small>
+                      </div>
+                      <div class="form-control">
+                        <input type="password" id="password" placeholder="Mật Khẩu" />
+                        <span></span>
+                        <small></small>
+                      </div>
+                      <div class="form-control">
+                        <input
+                          type="password" id="password2" placeholder="Nhập lại mật khẩu"/>
+                        <span></span>
+                        <small></small>
+                      </div>
+                      <input type="submit" value="Đăng Ký" />
+                      <div class="signup_link">Bạn đã có tài khoản?<a href="./login.html"> Đăng nhập</a></div>
+                </form> 
         </div>
-
-        <footer>
-            <div class="border"></div>
-            <div class="footer_container">
-                <div class="info_contact line_text_footer">
-                    <h3>Thông tin liên Hệ</h3>
-                    <br>
-                    <p>5/15 Tô Hiệu, Tân Thới Hòa, Tân Phú, Hồ Chí Minh (AM: 08H30 -> 11H45, PM: 13H30 -> 17H45) Vui
-                        lòng đừng đến địa chỉ trên để mua hàng vì đó là địa chỉ giả :( .Chân thành cảm ơn!</p>
-                    <br>
-                    <span><b>Phone: </b></span><span>037 335 7405.</span>
-                    <br>
-                    <p>Nếu có duyên tụi Tui sẽ bắt máy. </p>
-                    <br>
-                    <span><b>Email: </b></span><span>datvilla400tr@gmail.com</span>
-                </div>
-
-                <div class="support line_text_footer">
-                    <h3>Chính sách hỗ trợ</h3>
-                    <br>
-                    <a href="#">Tìm kiếm</a>
-                    <br>
-                    <a href="#">Giới Thiệu</a>
-                    <br>
-                    <a href="#">Chính sách đổi trả</a>
-                    <br>
-                    <a href="#">Chính sách bảo mật</a>
-                    <br>
-                    <a href="#">Điều khoản dịch vụ</a>
-                    <br>
-                </div>
-
-                <div class="contact_footer  line_text_footer">
-                    <h3>Thông tin liên kết</h3>
-                    <p>Hãy kết nối với chúng tôi.</p>
-                    <span><i class='bx bxl-facebook-square'></i></span>
-                    <span><i class='bx bxl-instagram'></i></span>
-                    <span><i class='bx bxl-tiktok'></i></span>
-                    <span><i class='bx bxl-twitter'></i></span>
-                </div>
-
-                <div class="report line_text_footer">
-                    <h3>Khiếu nại dịch vụ, góp ý</h3>
-                    <br>
-                    <p>Giờ nào cũng rãnh <br> Chúng tôi hứng thì sẽ bắt máy.</p>
-                </div>
-            </div>
-        </footer>
     </main>
+    <script src="Js/backSignUp.js"></script>
 </body>
-
 </html>

@@ -8,18 +8,15 @@
     <link rel="stylesheet" href="img/">
     <link rel="icon" href="./bxs-smile.svg">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./Js/backShop.js">
     <link rel="stylesheet" href="./Shop/assetShop.css">
+    <link rel="stylesheet" href="Shop/responsiveShop.css">
 </head>
 <body>
     <main>
         <header>
             <div class="frist_header">
-                <div>
-                    <a href="./index.html"><img class="logo_CH" src="img/logo_CH.jpg" alt="" ></a>
-                </div>
-
-                <div class="number_phone line_H">
-                    
+                <div class="number_phone line_H"> 
                     <p>
                         <i class='bx bxs-phone phone'></i> 
                         0373357405</p>
@@ -37,22 +34,74 @@
                     <span class="user_icon">
                         <i class='bx bx-user'></i>
                     </span>
+                    <!--Cart section-->
                     <span class="cart_icon">
-                            <a  href="./cart.html"><i class='bx bx-cart' ></i></a>
+                        <a href="./Cart.html">
+                            <i class='bx bx-cart cartNum'><span>0</span></i>
+                        </a>
                     </span>
+                     <!--End Cart section-->
                 </span>
             </div>
 
+            <!--Begin Cart-->
+            <div class="cart hideCart">
+                <div class="cart_container">
+                    <div class="cart_about">
+                        <h3 class="header_cart">Giỏ Hàng
+                            <i class='bx bx-x close'></i>
+                        </h3>
+                        <div class="cart_product">
+                            <table>
+                                <!--<thead>
+                                    <tr>
+                                        <th>
+                                            <h4>Hình ảnh</h4>
+                                        </th>
+                                        <th>
+                                            <h4>Sản phẩm</h4>
+                                        </th>
+                                        <th>
+                                            <h4>Giá</h4>
+                                        </th>
+                                        <th>
+                                            <h4>Số lượng</h4>
+                                        </th>
+                                        <th>
+                                            <h4>Chọn</h4>
+                                        </th>
+                                    </tr>
+                                </thead>-->
+
+                                <tbody>
+                                    <!--<tr>
+                                        <td><img class="cart_pd" src="./img/iphone 13 mini.webp" alt=""></td>
+                                        <td><b class="cart_pd">Iphone 14</b></td>
+                                        <td><p class="cart_pd">27.990.000<u>đ</u></p></td>
+                                        <td><input type="number" class="cart_pd"></input></td>
+                                        <td><i class='bx bx-x delete cart_pd'></i></td>
+                                    </tr>-->
+                                </tbody>
+                            </table>
+                            <h3 class="null_text"></h3>
+                            <div class="total">
+                                <!--<b class="total_cost">Tổng chi phí: <span>0</span> <u>đ</u></b>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End Cart-->
             <nav>
                 <ul class="nav_body">
                     <li><a href="./index.html">Home</a></li>
                     <li class="Shop_parent"><a href="./shop.html">Shop<i class='bx bx-chevron-down'></i>
-                        <ul class="sub_nav">
-                            <li><a href="./shop.html">Apple</a></li>
-                            <li><a href="./androi.html">Androi</a></li>
-                            <li><a href="./accessory.html">Phụ kiện</a></li>
-                        </ul>
-                    </a></li>
+                            <ul class="sub_nav">
+                                <li><a href="./shop.html">Apple</a></li>
+                                <li><a href="./androi.html">Android</a></li>
+                                <li><a href="./accessory.html">Phụ kiện</a></li>
+                            </ul>
+                        </a></li>
                     <li><a href="./blog.html">Blog</a></li>
                     <li><a href="./Contact.html">Contact</a></li>
                     <li><a href="./About.html">About</a></li>
@@ -63,9 +112,14 @@
 
         <div id="slider">
             <div class="img_slider">
-                <img src="./img/shopImg.jpg" alt="">
+                <img class="shop_img" src="./img/shopImg.jpg" alt="">
             </div>
+            
         </div>
+        <h1 class="text_shop">
+            Sản phẩm Apple <img class="img_apple" src="img/apple.png" alt="">
+        </h1>
+
 
         <div id="content">
             <div class="container">
@@ -75,7 +129,7 @@
                         <i class='bx bx-chevron-down drop'></i>
                         <ul class="list_phone">
                             <li><a href="#">IPHONE</a></li>
-                            <li><a href="./androi.html">ANDROI</a></li>
+                            <li><a href="./androi.html">ANDROID</a></li>
                             <li><a href="./accessory.html">PHỤ KIỆN</a></li>
                         </ul>
                     </div>
@@ -93,15 +147,12 @@
                                 <span>128GB</span>
                                 <span>256GB</span>
                                 <span>512GB</span>
-                                <span>1TB</span>
                             </div>
     
                             <div class="cost">
                                <span class="cost_phone"><b>27.490.000</b><u>đ</u></span> 
                                <span class="text_decor"><strike>33.990.000</strike><u>đ</u></span>
                             </div>
-                
-                                
                                 <div class="body_child">
                                     <span class="child_body">
                                         <i class='bx bxs-chip' ></i>
@@ -131,8 +182,7 @@
                                     </span>
                                 </div>
                                 <div class="footer_product">
-                                    <button>Mua Liền</button>
-                                    <button>Xíu Mua</button>
+                                    <button class="add_cart">Add to cart</button>
                                 </div>
                             </div>
                         </div>        
@@ -184,8 +234,8 @@
                                     </span>
                                 </div>
                                 <div class="footer_product">
-                                    <button>Mua Liền</button>
-                                    <button>Xíu Mua</button>
+        
+                                    <button class="add_cart">Add to cart</button>
                                 </div>
                             </div>
                         </div>        
@@ -239,8 +289,8 @@
                                     </span>
                                 </div>
                                 <div class="footer_product">
-                                    <button>Mua Liền</button>
-                                    <button>Xíu Mua</button>
+        
+                                    <button class="add_cart">Add to cart</button>
                                 </div>
                             </div>
                         </div>        
@@ -292,8 +342,8 @@
                                     </span>
                                 </div>
                                 <div class="footer_product">
-                                    <button>Mua Liền</button>
-                                    <button>Xíu Mua</button>
+        
+                                    <button class="add_cart">Add to cart</button>
                                 </div>
                             </div>
                         </div>        
@@ -312,7 +362,7 @@
                                 <span>128GB</span>
                                 <span>256GB</span>
                                 <span>512GB</span>
-                                <span>1TB</span>
+                              
                             </div>
                         <div class="cost">
                            <span class="cost_phone"><b>33.990.000</b><u>đ</u></span> 
@@ -349,8 +399,8 @@
                                 </span>
                             </div>
                             <div class="footer_product">
-                                <button>Mua Liền</button>
-                                <button>Xíu Mua</button>
+    
+                                <button class="add_cart">Add to cart</button>
                             </div>
                         </div>
                     </div>        
@@ -369,7 +419,7 @@
                             <span>128GB</span>
                             <span>256GB</span>
                             <span>512GB</span>
-                            <span>1TB</span>
+                           
                         </div>
                     <div class="cost">
                        <span class="cost_phone"><b>30.990.000</b><u>đ</u></span> 
@@ -406,8 +456,8 @@
                             </span>
                         </div>
                         <div class="footer_product">
-                            <button>Mua Liền</button>
-                            <button>Xíu Mua</button>
+
+                            <button class="add_cart">Add to cart</button>
                         </div>
                     </div>
                 </div>        
@@ -462,8 +512,7 @@
                         </span>
                     </div>
                     <div class="footer_product">
-                        <button>Mua Liền</button>
-                        <button>Xíu Mua</button>
+                        <button class="add_cart">Add to cart</button>
                     </div>
                 </div>
             </div>        
@@ -518,8 +567,7 @@
                     </span>
                 </div>
                 <div class="footer_product">
-                    <button>Mua Liền</button>
-                    <button>Xíu Mua</button>
+                    <button class="add_cart">Add to cart</button>
                 </div>
             </div>
         </div>        
@@ -572,8 +620,7 @@
                         </span>
                     </div>
                     <div class="footer_product">
-                        <button>Mua Liền</button>
-                        <button>Xíu Mua</button>
+                        <button class="add_cart">Add to cart</button>
                     </div>
                 </div>
             </div>        
@@ -587,15 +634,12 @@
             <div class="border"></div>
             <div class="footer_container">
                 <div class="info_contact line_text_footer">
-                    <h3>Thông tin liên Hệ</h3>
+                    <h3>Thông tin liên hệ</h3>
                     <br>
-                    <p>5/15 Tô Hiệu, Tân Thới Hòa, Tân Phú, Hồ Chí Minh (AM: 08H30 -> 11H45, PM: 13H30 -> 17H45) Vui lòng đừng đến địa chỉ trên để mua hàng vì đó là địa chỉ giả :( .Chân thành cảm ơn!</p>
+                    <p>5/15 Tô Hiệu, Tân Thới Hòa, Tân Phú, Hồ Chí Minh (AM: 08H30 -> 11H45, PM: 13H30 -> 17H45) 
+                        .Chân thành cảm ơn!</p>
                     <br>
-                    <span><b>Phone: </b></span><span>037 335 7405.</span>
-                    <br>
-                    <p>Nếu có duyên tụi Tui sẽ bắt máy. </p>
-                    <br>
-                    <span><b>Email: </b></span><span>datvilla400tr@gmail.com</span>
+                   
                 </div>
 
                 <div class="support line_text_footer">
@@ -625,7 +669,11 @@
                 <div class="report line_text_footer">
                     <h3>Khiếu nại dịch vụ, góp ý</h3>
                     <br>
-                    <p>Giờ nào cũng rãnh <br> Chúng tôi hứng thì sẽ bắt máy.</p>
+                    <p>Giờ nào cũng rãnh <br> Bạn vui lòng liên hệ <a href="Contact.html">Tại đây</a></p>
+                    <br>
+                    <span><b>Phone: </b></span><span>037 335 7405.</span>
+                    <br>
+                    <span><b>Email: </b></span><span>NAV@gmail.com</span>
                 </div>
             </div>
         </footer>

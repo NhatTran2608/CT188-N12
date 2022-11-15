@@ -76,7 +76,9 @@
     padding: 10px 20px;
     border: none;
     outline: none;
+    background: #47474c;
     color: white;
+    cursor: pointer;
 }
 
 .button_login{

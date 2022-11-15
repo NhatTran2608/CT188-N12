@@ -18,27 +18,12 @@ body {
     padding: 8px 3px;
 }
 
-.logo_CH{
-    margin-top: 25px ; 
-    display: inline-block;
-    width: 122px; 
-    height: 50px;
+header .cart_icon span {
+    font-size: 15px;
+    text-decoration: none;
     position: absolute;
-    top: 0;
-    left: 0;
-    line-height: 100px;
-    vertical-align: middle;
-    animation: example 5s infinite ease-in-out;
-    animation-duration: 5s;
-    animation-timing-function: ease-in-out;
-    animation-delay: 0s;
-    animation-iteration-count: infinite;
-    animation-direction: normal;
-    animation-fill-mode: none;
-    animation-play-state: running;
-    animation-name: example;
+    top: -5px;
 }
-
 @keyframes example{
     35%, 100% {
         transform: scale(1);
@@ -46,6 +31,10 @@ body {
     10% {
         transform: rotateX(360deg) scale(1.15);
     }
+}
+
+.Shop_parent{
+    z-index: 1;
 }
 
 .border{
@@ -120,6 +109,10 @@ header .icon_shop i{
     padding: 4px 15px;
     font-size: 20px;
     position: relative;
+}
+
+.shop_img{
+    margin-top: 30px;
 }
 
 header .cart_icon a{
@@ -218,8 +211,13 @@ header .Shop_parent:hover .sub_nav{
     margin-top: 50px;
 }
 
+.text_shop{
+    margin-top: 200px;
+    display: none;
+}
+
 #slider img {
-    width: 90%;
+    width: 78%;
     height: 300px;
     border-radius: 10px;
 }
@@ -229,7 +227,7 @@ header .Shop_parent:hover .sub_nav{
 }
 /*End slider*/
 #content {
-    width: 1260px;    
+    width: 100%;    
     margin: 0px auto;
     margin-bottom: 100px;
 }

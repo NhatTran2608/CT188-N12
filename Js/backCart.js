@@ -1,233 +1,96 @@
-// function addCart(code)
-// {
-	
-// 	var number=parseInt(document.getElementById(code).value);
-// 	if (number === 0){ alert("Hãy chọn số lượng bạn muốn thêm vào giỏ hàng!!!"); return false;}
-// 	if(typeof localStorage[code]==="undefined"){
-// 		window.localStorage.setItem(code,number)
-// 	}
-// 	else{
-// 		var current=parseInt(window.localStorage.getItem(code));
-// 		if(number+current > 100)
-// 			{
-// 				window.localStorage.setItem(code,100);
-// 			}
-// 			else {
-// 				window.localStorage.setItem(code,number+current);
-// 			}
-// 	}
-// }
-// function showCart()
-// {
-// 	var itemList={
-// 	"sp001":{	"name":"Iphone 13 ProMax", 
-// 				"price":27490000,
-// 				"photo":"./img/iphone13 pro max.webp"},
-	
-// 	"sp002":{	"name":"Iphone 13 Pro", 
-// 				"price":26900000,
-// 				"photo":"./img/iphone 13 pro.webp"},
-	
-// 	"sp003":{	"name":"Iphone 13", 
-// 				"price":19490000,
-// 				"photo":"./img/iphone 13.webp"},
-	
-// 	"sp004":{	"name":"Iphone 13 Mini", 
-// 				"price":16990000,
-// 				"photo":"./img/iphone 13 mini.webp"},
-				
-// 	"sp005":{	"name":"Iphone 14 Pro Max 128GB", 
-// 				"price":31990000,
-// 				"photo":"./img/iphone 14 plus.webp"},
-				
-// 	"sp006":{	"name":"Iphone 14 Pro", 
-// 				"price":27990000,
-// 				"photo":"./img/iphone 14 pro.webp"},
-				
-// 	"sp007":{	"name":"Iphone 14 Plus", 
-// 				"price":26790000,
-// 				"photo":"./img/iphone 14 plus.webp"},
-				
-// 	"sp008":{	"name":"Iphone 14", 
-// 				"price":20990000,
-// 				"photo":"./img/iphone 14.webp"},
-				
-// 	// "sp009":{	"name":"Asus ZenBook UX425EA i5 1135G7 (KI839W)", 
-// 	// 			"price":20199000,
-// 	// 			"photo":"images/sanpham/asus-zenbook-ux425ea-i5-1135g7-8gb-512gb-600x600.jpg"},
-// };
-	
-// 	var demo = document.getElementById("tbody-table");
-// 	var bang = document.createElement("tr");
-// 	bang.style="text-align:center;font-weight: bold;";
-// 	bang.innerHTML="<td>Hình SP</td><td>Tên SP</td><td>Số lượng</td><td>Đơn giá</td><td>Thành tiền</td><td></td>"
-// 	demo.appendChild(bang);
-	
-// 	totalPreTax = 0;
-// 	for(var i=0; i < localStorage.length; i++){
-// 	key = localStorage.key(i);
-// 	item = itemList[key];
-// 	name = item.name;
-// 	photo = item.photo;	
-// 	price = item.price;
-// 	orderNumber = localStorage.getItem(key);
-// 	thanhtien = price*orderNumber;
-	
-// 	var tr = document.createElement("tr");
-	
-// 	var picture = document.createElement("td");
-// 	picture.style="text-align:center";
-// 	var imgs = document.createElement("img");
-// 	picture.appendChild(imgs);
-// 	imgs.src = photo;
-// 	imgs.style.width ='100px';
-// 	var product = document.createElement("td");
-// 	product.style="text-align:center";
-// 	product.innerHTML = name;
-// 	var num = document.createElement("td");
-// 	num.style="text-align:center";
-// 	num.innerHTML = orderNumber;
-// 	var money = document.createElement("td");
-// 	money.style="text-align:center";
-// 	money.innerHTML = numberFormat.format(price);
-// 	var sum = document.createElement("td");
-// 	sum.style="text-align:center";
-// 	sum.innerHTML = numberFormat.format(thanhtien);
-	
-// 	var del = document.createElement("td");
-// 	del.style="text-align:center";
-// 	var icon = document.createElement("a");
-// 	icon.href='#';
-// 	icon.id=key;
-// 	del.appendChild(icon);
-// 	icon.innerHTML="<i onclick=removeCart(\'"+key+"\') id='del' style='color:red;' class='fa fa-trash icon-pink'></i>"
-	
-// 	tr.appendChild(picture);
-// 	tr.appendChild(product);
-// 	tr.appendChild(num);
-// 	tr.appendChild(money);
-// 	tr.appendChild(sum);
-// 	tr.appendChild(del);
-	
-// 	var addElement = document.getElementById("tbody-table");
-// 	addElement.appendChild(tr);
-	
-// 	totalPreTax = totalPreTax + (price * orderNumber);
-// 	}
-	
-// 	var row1 = document.createElement("tr");
-// 	row1.style="text-align:right";
-// 	row1.innerHTML="<td colspan=6><div>Tổng thành tiền (A) = "+ numberFormat.format(totalPreTax)+" </div></td>";
-	
-// 	var ckhau=(totalPreTax*getDiscountRate());
-// 	var row2 = document.createElement("tr");
-// 	row2.style="text-align:right"
-// 	row2.innerHTML="<td colspan=6><div>Chiết khấu (B) = "+getDiscountRate()+" * A = "+numberFormat.format(ckhau)+" </div></td>";
-	
-		
-// 	var tax=0.05*(totalPreTax-getDiscountRate());
-// 	var row3 = document.createElement("tr");
-// 	row3.style="text-align:right"
-// 	row3.innerHTML="<td colspan=6><div>Giảm giá (C) = 5% x (A-B) = "+numberFormat.format(tax)+" </div></td>";
-	
-	
-// 	var row4 = document.createElement("tr");
-// 	row4.style="text-align:right"
-// 	row4.innerHTML="<td colspan=6><div>Tổng đơn hàng = A - B - C = "+numberFormat.format(totalPreTax-ckhau-tax)+" </div></td>";
-	
-// 	var row5 = document.createElement("tr");
-// 	row5.style="text-align:center"
-// 	row5.innerHTML="<td colspan=6><button type='submit' id='Reset' onclick='submitHH()'>Xác nhận đơn hàng</button></td>";
-	
-// 	var tfoot = document.getElementById("tfoot-table");
-// 	tfoot.appendChild(row1);
-// 	tfoot.appendChild(row2);
-// 	tfoot.appendChild(row3);
-// 	tfoot.appendChild(row4);
-// 	tfoot.appendChild(row5);
-	
-// }
+/*Cart */
+var cart = document.querySelector('.cart')
+var cartIcon = document.querySelector('.cart_icon')
+var cartContainer = document.querySelector('.cart_container')
+var closeCart  = document.querySelector('.close')
+var NumCart = document.querySelector(".cartNum span")
+var cartProduct = document.querySelector('.cart_product')
+var TextNull = document.querySelector('.null_text')
+/*End Cart */
 
-// const numberFormat = new Intl.NumberFormat('vi-VN', {
-//   style: 'currency',
-//   currency: 'VND',
-// });
 
-// function removeCart(code)
-// {
-// 	alert("Bạn có chắc muốn xóa sản phẩm này!!!");
-// 	if(typeof window.localStorage[code] !== "underfined")
-// 	{
-// 		window.localStorage.removeItem(code);
-// 		document.getElementsByTagName('tbody')[0].innerHTML="";
-// 		document.getElementsByTagName('tfoot')[0].innerHTML="";
-// 		showCart();
-// 	}
-// }
 
-// function getDiscountRate(){
-// 	var d=new Date();
-// 	var weekday=d.getDay();
-// 	var totalMins=d.getHours()*60+d.getMinutes();
-// 	if(weekday>=1 && weekday<3 && 
-// 	((totalMins>=420 && totalMins<=660)||(totalMins>=780&& totalMins<=1020)))
-// 	return 0.1;
-// 	return 0;
-// }
+/*Thêm phẩy phần nghìn */
+const formatCurrency = (amount, locale = "vi-VN") => {
+    return new Intl.NumberFormat(locale, {
+    style: 'currency',
+    currency: 'VND',
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 2
+    }).format(amount);
+}
 
-// function submitHH(){
-// 	if(localStorage.length === 0)
-// 	{
-// 		alert("Giỏ hàng của bạn chưa có sản phẩm nào!!!");
-// 		return false;
-// 	}
-// 	else{
-// 		alert("Đơn hàng đã được xác nhận!!!");
-// 		return true;  
-// 	} 
-// }
+/*Tăng số lượng trên cartIcon */
+var NumCart = document.querySelector('.cartNum span')
+let num = 0
+let GetlocalCart = JSON.parse(localStorage.getItem('items'))
+    GetlocalCart.map(data=>{
+    num = num +data.quantity 
+})// chuyển về dạng objects để đọc số lượng sau đó innerText cho NumCart
+NumCart.innerText = num
 
-// function check()
-// {
-// 	var emailReg= /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]{2,4}$/;
-// 	if(emailReg.test(document.myform.e.value)==false)
-// 	{
-// 		alert("Định dạng Email không hợp lệ!!!");
-// 		return false;
-// 	}
-	
-	
-// 	var pass1=document.myform.psw1.value;
-// 	if(pass1.length<8){
-// 		alert("Hãy nhập mật khẩu mạnh hơn!!!(trên 8 kí tự)");
-// 		return false;
-// 	}
-// 	var pass2=document.myform.psw2.value;
-// 	if(pass1 != pass2 )
-// 	{
-// 		alert("Mật khẩu nhập lại không khớp!!!");
-// 		return false;
-// 	}
-	
-// 	alert("Chúc mừng!!! Đăng ký thành công!!!");
-// 	return true;
-// }
-// function checkLogin()
-// {
-// 	var emailReg= /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]{2,4}$/;
-// 	if(emailReg.test(document.myform.e.value)==false)
-// 	{
-// 		alert("Địa chỉ Email không hợp lệ!!!");
-// 		return false;
-// 	}
-	
-// 	var pass1=document.myform.psw1.value;
-// 	if(pass1.length<8){
-// 		alert("Sai mật khẩu !!!");
-// 		return false;
-// 	}
-// }
+//Lấy products ra local và thêm sản phẩm vào giỏ hàng
+var Cost = document.querySelector('.total')
+const tableCart = document.querySelector('table')
+var total = 0
+var convert = 0
+let tableTotal = ''
+let tableData = ''
+tableData += `
+                        <thead>
+                                    <tr>
+                                        <th>
+                                            <h4>Hình ảnh</h4>
+                                        </th>
+                                        <th>
+                                            <h4>Sản phẩm</h4>
+                                        </th>
+                                        <th>
+                                            <h4>Giá</h4>
+                                        </th>
+                                        <th>
+                                            <h4>Số lượng</h4>
+                                        </th>
+                                        <th>
+                                            <h4>Chọn</h4>
+                                        </th>
+                                    </tr>
+                                </thead>
+`
+if(GetlocalCart[0] == null) {
+    TextNull.innerHTML = 'Chưa có sản phẩm nào trong giỏ hàng :('
+}else {
+    JSON.parse(localStorage.getItem('items')).forEach(data => {
+        total += Number(data.quantity) * Number(data.price.replace(/[^0-9]/g,"")) 
+        tableData += `
+        <tr>    
+        <td><img class="cart_pd" src="${data.img}" alt=""></td>
+        <td><b class="cart_pd cart_name">${data.name}</b></td>
+        <td><span class="prices">${formatCurrency(data.price.replace(/[^0-9]/g,""))}</span></td>
+        <td><input type="number" value="${data.quantity}" id="input_number" class="cart_pd"></input></td>
+        <td><i style='color:red;' class='bx bx-x delete cart_pd' onclick="Delete(this)"></i></td>
+    </tr>
+ `
+    })
+    tableCart.innerHTML = tableData  
+        tableTotal += 
+            `<b class="total_cost">Tổng chi phí: <span>${formatCurrency(total)}</span></b>
+                 <div class="buy">
+                    <button class="buy_now">Mua ngay</button>
+                 </div>
+            `
+            Cost.innerHTML = tableTotal
+}
 
-// window.onstorage = () =>{showCart();
 
-// };
+
+function Delete(e){
+    let items = []
+    JSON.parse(localStorage.getItem('items')).map(data => {
+        if(data.name != e.parentElement.parentElement.children[1].textContent) {
+            items.push(data)
+        }
+    })
+    localStorage.setItem('items',JSON.stringify(items))
+    window.location.reload()
+}

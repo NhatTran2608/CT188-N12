@@ -92,6 +92,7 @@
     grid-template-columns: auto auto auto auto; 
     text-align: center;
     margin: 20px 0px;
+    justify-content: center;
 }
 
 #content .about_content h3 {
@@ -391,6 +392,8 @@ header .cart_icon span{
         justify-content: center;
         margin-top: 10px;
 }
+/*Cart*/
+
 .wrapper{
     text-align: center;
 }
