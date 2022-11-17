@@ -1,6 +1,6 @@
 /*Ipad dọc(768 x 1024)*/
 @media only screen and (min-width: 740px) and (max-width:1023px) {
-    .map_section{
+    .map_section {
         width: 100%;
     }
 
@@ -39,25 +39,27 @@
         margin: auto;
     }
 
-    .map_section{
+    .map_section {
         display: none;
     }
 
-    .container_contact h3{
+    .container_contact h3 {
         display: none;
     }
+
     #contact .info_contact {
         width: 100%;
     }
 
-    .contact_me{
+    .contact_me {
         padding-top: 50px;
         margin: 10px;
     }
 
     #contact .info_contact {
-        margin-top: 25px ;
+        margin-top: 25px;
     }
+
     .info_contact {
         padding-top: 0px;
     }
@@ -80,6 +82,3 @@
     }
 
 }
-
-
-

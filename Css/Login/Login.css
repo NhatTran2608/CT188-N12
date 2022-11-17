@@ -1,5 +1,3 @@
-
-
 .marginTop_10px {
     margin-top: 20px;
 }
@@ -12,18 +10,18 @@
     line-height: 1.5;
 }
 
-#login{
+#login {
     margin: 150px 0px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-#login .login_section{
+#login .login_section {
     width: 570px;
 }
 
-#login .login_section h3{
+#login .login_section h3 {
     text-align: center;
     font-weight: 400;
 }
@@ -46,7 +44,7 @@
 }
 
 #login .form_group input {
-    margin-left: 30px;  
+    margin-left: 30px;
 }
 
 #login .form_group span {
@@ -81,18 +79,16 @@
     cursor: pointer;
 }
 
-.button_login{
+.button_login {
     display: block;
     cursor: pointer;
     padding: 10px;
     background-color: #009EFF;
-    border-radius: 2px; 
-    
+    border-radius: 2px;
+
 }
 
-.button_login_nen{
+.button_login_nen {
     border-radius: 5px;
     background-color: #fff;
 }
-
-

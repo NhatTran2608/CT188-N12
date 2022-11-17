@@ -1,4 +1,4 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -6,14 +6,14 @@
 
 body {
     font-family: sans-serif;
-} 
+}
 
 .width {
     width: 100%;
 }
 
-.child_body{
-    font-size: 14px; 
+.child_body {
+    font-size: 14px;
     margin-left: 2px;
     padding: 8px 3px;
 }
@@ -24,20 +24,24 @@ header .cart_icon span {
     position: absolute;
     top: -5px;
 }
-@keyframes example{
-    35%, 100% {
+
+@keyframes example {
+
+    35%,
+    100% {
         transform: scale(1);
     }
+
     10% {
         transform: rotateX(360deg) scale(1.15);
     }
 }
 
-.Shop_parent{
+.Shop_parent {
     z-index: 1;
 }
 
-.border{
+.border {
     border-radius: 15px;
 }
 
@@ -72,7 +76,7 @@ header .shop_name {
     position: relative;
 }
 
-header .shop_name i{
+header .shop_name i {
     position: absolute;
 }
 
@@ -88,7 +92,7 @@ header .frist_header {
     z-index: 2;
 }
 
-header .search_icon input{
+header .search_icon input {
     padding: 5px 5px;
     border: 1px solid #ccc;
     position: absolute;
@@ -100,18 +104,18 @@ header .search_icon input{
     visibility: hidden;
 }
 
-.show{
+.show {
     visibility: initial;
 }
 
-header .icon_shop i{
+header .icon_shop i {
     line-height: 20px;
     padding: 4px 15px;
     font-size: 20px;
     position: relative;
 }
 
-header .cart_icon a{
+header .cart_icon a {
     color: black;
 }
 
@@ -123,7 +127,7 @@ header .number_phone {
     margin-left: 100px;
 }
 
-header .number_phone i{
+header .number_phone i {
     font-size: 25px;
     height: 27px;
     width: 27px;
@@ -133,13 +137,14 @@ header .number_phone i{
     border-radius: 50%;
     line-height: 24px;
 }
+
 /*End Head NAV*/
 
 /*Child NAV*/
 
 nav {
     padding-top: 80px;
-    height: 50px;  
+    height: 50px;
 }
 
 
@@ -148,21 +153,22 @@ nav .nav_body {
     justify-content: center;
 }
 
-nav a{
+nav a {
     text-decoration: none;
-    color: black;      
+    color: black;
 }
 
-nav .nav_body > li {
+nav .nav_body>li {
     list-style-type: none;
     padding: 15px;
     transition: 0.25s;
 }
 
 
-nav .nav_body > li:hover {
+nav .nav_body>li:hover {
     transform: scale(1.2);
 }
+
 /*End Child NAV*/
 /*Sub_nav*/
 header .sub_nav {
@@ -174,14 +180,14 @@ header .sub_nav {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-nav .sub_nav > li {
+nav .sub_nav>li {
     height: 50px;
     list-style-type: none;
     transition: 0.25s;
-   
+
 }
 
-nav .sub_nav > li a{
+nav .sub_nav>li a {
     line-height: 50px;
     display: block;
     padding-left: 5px;
@@ -197,7 +203,7 @@ header .sub_nav li:hover {
     background: #dadada;
 }
 
-header .Shop_parent:hover .sub_nav{
+header .Shop_parent:hover .sub_nav {
     display: block;
 }
 
@@ -206,7 +212,7 @@ header .Shop_parent:hover .sub_nav{
     margin-top: 50px;
 }
 
-.text_shop{
+.text_shop {
     margin-top: 200px;
     display: none;
 }
@@ -220,9 +226,10 @@ header .Shop_parent:hover .sub_nav{
 #slider .img_slider {
     text-align: center;
 }
+
 /*End slider*/
 #content {
-    width: 100%;    
+    width: 100%;
     margin: 0px auto;
     margin-bottom: 100px;
 }
@@ -233,7 +240,7 @@ header .Shop_parent:hover .sub_nav{
     margin-top: 50px;
     column-gap: 30px;
     justify-content: center;
-    
+
 }
 
 #content .list_products .head_list {
@@ -241,7 +248,7 @@ header .Shop_parent:hover .sub_nav{
     padding: 15px;
 }
 
-#content .list_products .head_list i{
+#content .list_products .head_list i {
     float: right;
     font-size: 20px;
     cursor: pointer;
@@ -297,7 +304,7 @@ header .Shop_parent:hover .sub_nav{
     overflow: hidden;
 }
 
-#content .body_phone h3{
+#content .body_phone h3 {
     padding: 5px;
     margin-bottom: 10px;
     font-size: 18px;
@@ -305,7 +312,7 @@ header .Shop_parent:hover .sub_nav{
 
 #content .Gb_phone {
     margin-bottom: 20px;
-    
+
 }
 
 #content .Gb_phone span {
@@ -320,7 +327,7 @@ header .Shop_parent:hover .sub_nav{
     background-color: #9c9c9c;
 }
 
-#content .list_product > img {
+#content .list_product>img {
     width: 70%;
     object-fit: cover;
     object-position: center;
@@ -331,11 +338,11 @@ header .Shop_parent:hover .sub_nav{
     border: 1px solid #dadada;
 }
 
-#content .bank img{
+#content .bank img {
     border-radius: 15px;
     margin-top: 10px;
     display: inline-block;
-}   
+}
 
 #content .cost {
     padding: 10px 0px;
@@ -379,10 +386,10 @@ header .Shop_parent:hover .sub_nav{
 
 #content .list_bank p {
     font-size: 12px;
-    
+
 }
 
-#content .about_bank1{
+#content .about_bank1 {
     margin-top: 8px;
     margin-left: 10px;
     font-size: 13px;
@@ -395,7 +402,7 @@ header .Shop_parent:hover .sub_nav{
 
 /*footer*/
 
-footer .border{
+footer .border {
     border: 1px solid #ccc;
     margin-bottom: 60px;
 }
@@ -406,16 +413,16 @@ footer .footer_container {
     grid-template-columns: auto auto auto auto;
 }
 
-footer  .info_contact {
-    width: 250px;    
+footer .info_contact {
+    width: 250px;
 }
 
-footer  .info_contact h3{
+footer .info_contact h3 {
     font-size: 20px;
 
 }
 
-footer .support a{
+footer .support a {
     text-decoration: none;
     color: black;
 }

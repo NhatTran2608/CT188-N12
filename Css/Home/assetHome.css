@@ -1,6 +1,5 @@
-
 /*Slider*/
-.slider-edit{
+.slider-edit {
     text-align: center;
     margin: auto;
 }
@@ -12,7 +11,7 @@
 #slider .container {
     display: flex;
     align-items: center;
-    justify-content: center;  
+    justify-content: center;
 }
 
 #slider #img_phone img {
@@ -23,7 +22,9 @@
     border-radius: 8px;
 }
 
-#slider .click1, .click2, .click3 {
+#slider .click1,
+.click2,
+.click3 {
     cursor: pointer;
     width: 15px;
     height: 15px;
@@ -45,7 +46,7 @@
     margin-left: 10px;
 }
 
-#slider .control{
+#slider .control {
     color: black;
     position: absolute;
     top: 42%;
@@ -70,9 +71,12 @@
     background-color: #ccc;
 }
 
-.click1:after , .click2:after , .click3:after {
+.click1:after,
+.click2:after,
+.click3:after {
     background-color: black;
 }
+
 /*End Slider*/
 
 #content {
@@ -89,7 +93,7 @@
 #content .about_content {
     line-height: 1.5;
     display: grid;
-    grid-template-columns: auto auto auto auto; 
+    grid-template-columns: auto auto auto auto;
     text-align: center;
     margin: 20px 0px;
     justify-content: center;
@@ -109,24 +113,28 @@
 #content .about_content i {
     font-size: 40px;
 }
+
 /*ENd About content*/
 #content .title_content i {
     font-size: 25px;
 }
+
 #content .title_content {
     font-size: 20px;
     margin-bottom: 30px;
     position: relative;
     text-align: center;
 }
-  /* phần background trắng che line bên dưới */
+
+/* phần background trắng che line bên dưới */
 #content .title_content h3 span {
     background-color: #fff;
     padding: 0px 20px;
     position: relative;
     z-index: 1;
 }
-  /* line của h2 */
+
+/* line của h2 */
 #content .title_content h3::after {
     background-color: black;
     content: "";
@@ -149,7 +157,7 @@
     width: 100%;
 }
 
-#content .title_content > p {
+#content .title_content>p {
     margin-top: 10px;
     font-size: 18px;
     color: #9c9c9c;
@@ -163,11 +171,11 @@
     justify-content: center;
 }
 
-#content .count_down  p {
+#content .count_down p {
     margin-bottom: 3px;
-} 
+}
 
-#content .count_down .item{
+#content .count_down .item {
     text-align: center;
     margin: 0px 10px;
     padding: 6px 10px;
@@ -175,13 +183,14 @@
     color: white;
     border-radius: 15px;
 }
+
 /*End count down sale*/
 
 #content .list_system {
     margin-left: 12.5%;
 }
 
-#content .list_system button{
+#content .list_system button {
     padding: 10px 10px;
     border: 1px solid #dadada;
     margin-top: 20px;
@@ -200,7 +209,7 @@
 #content .System li {
     padding: 10px 12px;
     cursor: pointer;
-    border-bottom: 1px solid #dadada;    
+    border-bottom: 1px solid #dadada;
 }
 
 #content .System li a {
@@ -212,6 +221,7 @@
 #content .System li:hover {
     background-color: #dadada;
 }
+
 /*Product*/
 #content .list_product {
     max-width: 280px;
@@ -244,7 +254,7 @@
     overflow: hidden;
 }
 
-#content .body_phone h3{
+#content .body_phone h3 {
     padding: 5px;
     margin-bottom: 10px;
     font-size: 18px;
@@ -252,7 +262,7 @@
 
 #content .Gb_phone {
     margin-bottom: 20px;
-    
+
 }
 
 #content .Gb_phone span {
@@ -267,7 +277,7 @@
     background-color: #9c9c9c;
 }
 
-#content .list_product > img {
+#content .list_product>img {
     width: 70%;
     object-fit: cover;
     object-position: center;
@@ -278,11 +288,11 @@
     border: 1px solid #dadada;
 }
 
-#content .bank img{
+#content .bank img {
     border-radius: 15px;
     margin-top: 10px;
     display: inline-block;
-}   
+}
 
 
 /*Sub_nav*/
@@ -303,7 +313,7 @@ header .sub_nav li:hover {
     background: #dadada;
 }
 
-header .Shop_parent:hover  .sub_nav{
+header .Shop_parent:hover .sub_nav {
     display: block;
 }
 
@@ -312,12 +322,12 @@ header .cart_icon span {
     text-decoration: none;
     position: absolute;
     top: -5px;
-    
+
 }
 
 
 
 
-.wrapper{
+.wrapper {
     text-align: center;
 }

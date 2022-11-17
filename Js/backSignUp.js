@@ -19,11 +19,11 @@ function showSuccess(input) {
 }
 
 /*Check email*/
-function checkEmail(input){
+function checkEmail(input) {
     const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-    if(regex.test(input.value.trim())){
+    if (regex.test(input.value.trim())) {
         showSuccess(input)
-    }else {
+    } else {
         showError(input, 'Email nhập không dúng')
     }
 }
@@ -33,10 +33,10 @@ function checkEmpty(Listinput) {
     var isEmpty = false
     Listinput.forEach(input => {
         input.value = input.value.trim()
-        if(!input.value){
+        if (!input.value) {
             isEmpty = true;
-            showError(input,'Vui lòng nhập dữ liệu vào trường này')
-        }else {
+            showError(input, 'Vui lòng nhập dữ liệu vào trường này')
+        } else {
             showSuccess(input)
         }
     });
@@ -45,35 +45,34 @@ function checkEmpty(Listinput) {
 
 /*check password*/
 function checkPassword(input, min, max) {
-    if(input.value.length < min){
+    if (input.value.length < min) {
         showError(input, `Vui lòng nhập lớn hơn ${min} ký tự`);
-    }else {
+    } else {
         showSuccess(input)
     }
 }
 
 /*check password match */
 function matchPass(input, input2) {
-    if(input.value != input2.value) {
-        showError(input2,'Mật khẩu nhập lại không khớp')
+    if (input.value != input2.value) {
+        showError(input2, 'Mật khẩu nhập lại không khớp')
     }
 }
 
 function callError() {
     checkEmail(email)
-    checkPassword(password,6)
-    matchPass(password,password2)
+    checkPassword(password, 6)
+    matchPass(password, password2)
 }
 
-form.addEventListener('submit',function(e) {
+form.addEventListener('submit', function (e) {
     e.preventDefault();
-    
-    if(!checkEmpty([username, email, password, password2])){
+
+    if (!checkEmpty([username, email, password, password2])) {
         callError()
     }
-    
+
 })
 
-    
-    
-    
+
+

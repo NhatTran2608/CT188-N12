@@ -1,4 +1,3 @@
-
 .hide_list {
     display: none;
 }
@@ -26,17 +25,18 @@
     border: 1px solid #dadada;
 }
 
-#content .bank img{
+#content .bank img {
     border-radius: 15px;
     margin-top: 10px;
     display: inline-block;
-}   
+}
 
 #content .cost {
     padding: 10px 7px;
 }
 
-#content .cost_phone2, .cost_phone3 {
+#content .cost_phone2,
+.cost_phone3 {
     background-color: #ef8573;
     padding: 5px 8px;
     border-radius: 15px;

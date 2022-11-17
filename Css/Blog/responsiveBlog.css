@@ -5,6 +5,7 @@
         grid-template-columns: 300px auto;
         column-gap: 50px;
     }
+
     #blog .img_news {
         width: 350px;
     }
@@ -34,9 +35,6 @@
         margin: auto;
         width: 80%;
     }
-    
+
 
 }
-
-
-

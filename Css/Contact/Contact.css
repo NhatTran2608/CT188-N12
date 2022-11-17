@@ -1,5 +1,3 @@
-
-
 .line_text_footer {
     line-height: 1.5;
 }
@@ -25,7 +23,7 @@
     margin: 9px;
 }
 
-#contact .container_contact iframe{
+#contact .container_contact iframe {
     width: 1144px;
     height: 500px;
 }
@@ -44,19 +42,19 @@
 }
 
 #contact .info_input input {
-    margin-top: 12px;    
+    margin-top: 12px;
     padding: 6px 12px;
 }
 
-#contact .info_input i{
+#contact .info_input i {
     padding: 5px 10px;
     padding-bottom: 10px;
     border: 1px solid #dadada;
     margin-right: 5px;
 }
 
-#contact .contact_me b{
-    border-bottom: 1px solid  #dadada;
+#contact .contact_me b {
+    border-bottom: 1px solid #dadada;
 }
 
 #contact .write_mail {
@@ -82,7 +80,7 @@
 }
 
 #contact .info_contact {
-    
+
     width: 575px;
 }
 
@@ -95,6 +93,6 @@
     margin-top: 10px;
 }
 
-.button_send_1{
+.button_send_1 {
     cursor: pointer;
 }

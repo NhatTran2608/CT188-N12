@@ -1,24 +1,27 @@
 /*Ipad dọc(768 x 1024)*/
 @media only screen and (min-width: 740px) and (max-width:1023px) {
-    #content .card_product{
-        grid-template-columns: repeat(3, 1fr); 
+    #content .card_product {
+        grid-template-columns: repeat(3, 1fr);
     }
+
     footer .footer_container {
         padding: 30px;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
-    .line_text_footer{
+
+    .line_text_footer {
         text-align: center;
         margin: auto;
 
     }
-    .line_text_footer p{
+
+    .line_text_footer p {
         text-align: left;
         margin: auto;
     }
 
-    .shop_img{
+    .shop_img {
         margin-top: 50px;
     }
 
@@ -32,10 +35,11 @@
 
 /*Iphone(480 x 640)*/
 @media only screen and (max-width: 739px) {
-    header{
+    header {
         height: 40px;
     }
-    header .frist_header{
+
+    header .frist_header {
         align-items: center;
         box-shadow: 2px 0px 4px rgb(125 134 138 / 60%);
         position: fixed;
@@ -51,30 +55,30 @@
     }
 
     header .search_icon input {
-        position: absolute; 
+        position: absolute;
         top: 10px;
         right: 10px;
-        
+
     }
 
     .cart .cart_container {
         width: 80%;
     }
 
-    nav{
+    nav {
         padding-top: 120px;
         height: 40px;
     }
 
-    .number_phone p{
+    .number_phone p {
         display: none;
     }
 
-    .number_phone i{
+    .number_phone i {
         display: block;
     }
 
-    .wrapper{
+    .wrapper {
         margin-top: 80px;
         text-align: center;
     }
@@ -82,27 +86,28 @@
     #slider .shop_img {
         display: none;
     }
-    
+
     #slider .control i {
         font-size: 20px;
-        
+
     }
 
     #slider .control.next {
         right: 50px;
-        
+
     }
+
     #slider .control.prev {
         left: 50px;
-       
+
     }
 
     .total {
         margin-top: 50px;
     }
 
-    #content .card_product{
-        grid-template-columns: repeat(2, 1fr); 
+    #content .card_product {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     #content .collums {
@@ -111,11 +116,11 @@
         padding: 15px;
     }
 
-    .shop_name h1{
+    .shop_name h1 {
         margin-right: 45px;
     }
 
-    nav .nav_body > li {
+    nav .nav_body>li {
         padding: 10px;
     }
 
@@ -123,6 +128,7 @@
         transform: scale(1.02);
         transition: 0.1;
     }
+
     #content .body_child img {
         width: 13px;
         margin-top: 25px;
@@ -149,7 +155,7 @@
         display: none;
     }
 
-    .text_shop{
+    .text_shop {
         text-align: center;
         margin: auto;
         margin-top: 150px;
@@ -162,18 +168,19 @@
         box-shadow: 2px 5px #888888;
     }
 
-    .img_apple{
+    .img_apple {
         width: 35px;
         margin-top: px;
     }
-    
+
     #slider img {
         width: 78%;
         height: 180px;
         border-radius: 10px;
     }
+
     #slider .control i {
         display: none;
     }
-   
+
 }
