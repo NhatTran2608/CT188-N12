@@ -1,6 +1,5 @@
 /*Ipad dọc(768 x 1024)*/
 @media only screen and (min-width: 740px) and (max-width:1023px) {
-
     .map_section{
         width: 100%;
     }
@@ -24,6 +23,7 @@
     #contact h3 {
         margin-left: 5px;
     }
+
 }
 
 

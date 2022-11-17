@@ -13,6 +13,23 @@
     .cart .cart_container .cart_about{
         margin-top: 150px;
     }
+    header .icon_shop i {
+        line-height: 20px;
+        padding: 4px 15px;
+        font-size: 20px;
+        position: relative;
+    }
+    .cart .cart_container {
+        margin: 50px;
+        width: 70%;
+    }
+
+    .cart_product table {
+        border: 1px solid black;
+    }
+    
+    
+
 
 }
 

@@ -1,14 +1,3 @@
-/*Cart */
-var cart = document.querySelector('.cart')
-var cartIcon = document.querySelector('.cart_icon')
-var cartContainer = document.querySelector('.cart_container')
-var closeCart  = document.querySelector('.close')
-var NumCart = document.querySelector(".cartNum span")
-var cartProduct = document.querySelector('.cart_product')
-var TextNull = document.querySelector('.null_text')
-/*End Cart */
-
-
 
 /*Thêm phẩy phần nghìn */
 const formatCurrency = (amount, locale = "vi-VN") => {
@@ -19,6 +8,8 @@ const formatCurrency = (amount, locale = "vi-VN") => {
     maximumFractionDigits: 2
     }).format(amount);
 }
+
+var TextNull = document.querySelector('.null_text')
 
 /*Tăng số lượng trên cartIcon */
 var NumCart = document.querySelector('.cartNum span')
@@ -38,24 +29,24 @@ let tableTotal = ''
 let tableData = ''
 tableData += `
                         <thead>
-                                    <tr>
-                                        <th>
-                                            <h4>Hình ảnh</h4>
-                                        </th>
-                                        <th>
-                                            <h4>Sản phẩm</h4>
-                                        </th>
-                                        <th>
-                                            <h4>Giá</h4>
-                                        </th>
-                                        <th>
-                                            <h4>Số lượng</h4>
-                                        </th>
-                                        <th>
-                                            <h4>Chọn</h4>
-                                        </th>
-                                    </tr>
-                                </thead>
+                                <tr>
+                                    <th>
+                                        <h4>Hình ảnh</h4>
+                                    </th>
+                                    <th>
+                                        <h4>Sản phẩm</h4>
+                                    </th>
+                                    <th>
+                                        <h4>Giá</h4>
+                                    </th>
+                                    <th>
+                                        <h4>Số lượng</h4>
+                                    </th>
+                                    <th>
+                                        <h4>Chọn</h4>
+                                    </th>
+                                </tr>
+                        </thead>
 `
 if(GetlocalCart[0] == null) {
     TextNull.innerHTML = 'Chưa có sản phẩm nào trong giỏ hàng :('
@@ -76,21 +67,52 @@ if(GetlocalCart[0] == null) {
         tableTotal += 
             `<b class="total_cost">Tổng chi phí: <span>${formatCurrency(total)}</span></b>
                  <div class="buy">
-                    <button class="buy_now">Mua ngay</button>
+                    <button class="buy_now" onclick ="DeleteAll(this)">Mua ngay</button>
                  </div>
             `
             Cost.innerHTML = tableTotal
+
+    
 }
 
-
+var tong = formatCurrency(total)
 
 function Delete(e){
     let items = []
     JSON.parse(localStorage.getItem('items')).map(data => {
-        if(data.name != e.parentElement.parentElement.children[1].textContent) {
+        if(data.name == e.parentElement.parentElement.children[1].textContent) {
+            if(data.quantity > 1) {
+                data.quantity--
+                items.push(data)
+                }
+        }else {
             items.push(data)
         }
     })
     localStorage.setItem('items',JSON.stringify(items))
     window.location.reload()
 }
+
+/*Scroll on Top */
+$('.shop_name i').click(function() {
+    $('html, body').animate({ scrollTop : 0}, 'slow')
+})
+
+function DeleteAll(e){
+    let items = []
+    JSON.parse(localStorage.getItem('items')).map(data => {
+        if(data.name != e.parentElement.parentElement.children[1].textContent) {
+            localStorage.setItem('items',JSON.stringify(items))
+        }
+    })
+    
+    window.location.reload()
+}
+
+document.querySelector('.buy_now').addEventListener('click', function () {
+    if (confirm('Bạn chắc chắn muốn đặt hàng?\nĐơn hàng của bạn là: ' + tong))
+        alert('Mua hàng thành công\nCảm ơn bạn!!!')
+    else{
+
+    }
+})

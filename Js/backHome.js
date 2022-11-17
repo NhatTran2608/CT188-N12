@@ -7,14 +7,6 @@ var Slider = document.querySelector('.container');
 var NavChild = document.querySelector('.nav_body');
 var List = document.querySelector('.list');
 var system = document.querySelector('.System');
-var buyNow = document.querySelectorAll('#buy_now');
-var buyLater = document.querySelectorAll('#buy_later');
-
-var cart = document.querySelector('.cart');
-var cartIcon = document.querySelector('.cart_icon');
-var cartContainer = document.querySelector('.cart_container');
-var closeCart  = document.querySelector('.close');
-var NumCart = document.querySelector(".cartNum span")
 
 
 function ShowIcon() {
@@ -100,110 +92,83 @@ List.addEventListener('click',() => {
     system.classList.toggle('hide')
 })
 
+NavChild.addEventListener('click', function() {
+    searchIcon.classList.remove('hide')
+    searchInput.classList.add('hide')
+})
 /*add cart*/
 
-for(let i = 0 ; i < buyNow.length ; i++) {
-    buyNow[i].addEventListener('click',function(){
-        alert('Thêm vào vỏ hàng cái đi rồi mua gấp gáp gì đâu -_-');
-    })
-}
 
 /*Show and Hide Cart*/
-function HideCart() {
-    cart.classList.add('hideCart')
-}
 
-function ShowCart() {
-    cart.classList.toggle('hideCart')
-}
-
-cartIcon.addEventListener('click',function() {
-    ShowCart()
-})
-
-cart.addEventListener('click',function() {
-    HideCart();
-})
-
-cartContainer.addEventListener('click',function(e) {
-    e.stopPropagation();
-})
-
-closeCart.addEventListener('click',function() {
-    cart.classList.add('hideCart')
-})
 
 /*Add cart */
-buyLater.forEach(function(button, index) {
-    button.addEventListener('click',function(e) {{
-        var btnItem = e.target
-        var productItem = btnItem.parentElement.parentElement.parentElement
-        var productImg = productItem.querySelector('img').src
-        var productName = productItem.querySelector('h3').innerText
-        var productPrice = productItem.querySelector(".cost_phone b").innerText
-        addCart(productPrice,productImg,productName)
-    }})
-})
 
-
-
-/*function addCart(productPrice,productImg,productName) {
-    var addtr = document.createElement("tr")
-    var trContent = `
-            <tr>    
-            <td><img class="cart_pd" src="${productImg}" alt=""></td>
-            <td><b class="cart_pd cart_name">${productName}</b></td>
-            <td><span class="prices">${productPrice}</span></td>
-            <td><input type="number" value="1" id="input_number" class="cart_pd"></input></td>
-            <td><i  style='color:red;' class='bx bx-x delete cart_pd'></i></td>
-        </tr>
-    `
-    addtr.innerHTML = trContent
-    var cartTable = document.querySelector("tbody")
-    cartTable.append(addtr)
-    deleteProduct()
-    cartTotal()
-}
-
-function cartTotal() {
-    var cartItem = document.querySelectorAll("tbody tr")
-    var mul = 0
-    for(var i = 0 ; i < cartItem.length ; i++) {
-        var inputValue = cartItem[i].querySelector("input").value
-        var productPrice = cartItem[i].querySelector(".prices").innerHTML
-        productPrice = parseFloat(productPrice)
-        totalA = inputValue * prodsuctPrice * 1000000
-        mul = mul + totalA
-    }
-    var totalNumber = document.querySelector('.total_cost span')
-    totalNumber.innerHTML = mul.toLocaleString("de-DE")
-    NumCart.innerText = cartItem.length
-    increaseNumCart();
-}
-
-function deleteProduct() {
-    var cartItem = document.querySelectorAll('tbody tr')
-    for(let i = 0 ; i < cartItem.length ; i++) {
-        var deleteIcon = document.querySelectorAll('.delete')
-        deleteIcon[i].addEventListener('click',function(e) {
-            var locationDelete = e.target
-            var products = locationDelete.parentElement.parentElement
-            products.remove();
-            cartTotal();
-        })
-    }
-}
-
-function increaseNumCart() {
-    var cartItem = document.querySelectorAll('tbody tr')
-    for(let i = 0 ; i < cartItem.length ; i++) {
-        var inputNum = cartItem[i].querySelector('input')
-        inputNum.addEventListener('change',function() {
-            cartTotal()
-        })
-    }
-}*/
-
+/*Scroll on Top */
 $('.shop_name i').click(function() {
     $('html, body').animate({ scrollTop : 0}, 'slow')
 })
+
+
+/*button product */
+
+var NumCart = document.querySelector(".cartNum span")
+const ItemBtn = document.querySelectorAll('.add_cart')
+
+
+
+
+
+/* Lắng nghe sự kiện button Chuyển product qua local*/
+let items =[];
+for(let i = 0 ; i < ItemBtn.length ; i++) {
+    ItemBtn[i].addEventListener('click',function(e) {
+        if(typeof(Storage) !== 'undefined') {
+            let item = {
+                id: i+1,
+                img:e.target.parentElement.nextSibling.parentElement.parentElement.children[0].children[0].src,
+                name: e.target.parentElement.nextSibling.parentElement.children[0].textContent,
+                price: e.target.parentElement.nextSibling.parentElement.children[2].children[0].textContent,
+                quantity: 1
+               };
+               if(JSON.parse(localStorage.getItem('items')) === null){
+                    items.push(item)
+                    localStorage.setItem("items", JSON.stringify(items))
+                    window.location.reload()
+               }else {
+                    const localItems = JSON.parse(localStorage.getItem("items"))
+                    localItems.map(data => {
+                        if(item.id == data.id){
+                            item.quantity = data.quantity + 1 
+                        }else {
+                            items.push(data)
+                        }
+                    })
+                    items.push(item)
+                        localStorage.setItem('items',JSON.stringify(items))
+                        window.location.reload()
+               }
+        }else {
+            alert('local Storage is not working!')
+        }
+    })
+}
+
+/*Thêm phẩy phần nghìn */
+const formatCurrency = (amount, locale = "vi-VN") => {
+    return new Intl.NumberFormat(locale, {
+    style: 'currency',
+    currency: 'VND',
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 2
+    }).format(amount);
+}
+
+/*Tăng số lượng trên cartIcon */
+var NumCart = document.querySelector('.cartNum span')
+let num = 0
+let GetlocalCart = JSON.parse(localStorage.getItem('items'))
+    GetlocalCart.map(data=>{
+    num = num +data.quantity 
+})// chuyển về dạng objects để đọc số lượng sau đó innerText cho NumCart
+NumCart.innerText = num

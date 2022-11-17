@@ -111,10 +111,6 @@ header .icon_shop i{
     position: relative;
 }
 
-.shop_img{
-    margin-top: 30px;
-}
-
 header .cart_icon a{
     color: black;
 }
@@ -150,7 +146,6 @@ nav {
 nav .nav_body {
     display: flex;
     justify-content: center;
-
 }
 
 nav a{

@@ -1,45 +1,19 @@
-var listPhone = document.querySelector('.list_phone')
-var icon = document.querySelector('.drop')
-var searchIcon = document.querySelector('.search_icon i')
-var Imgslider = document.querySelector('.img_slider')
-var searchInput = document.querySelector('.search_input')
-var navChild = document.querySelector('.nav_body')
-
 /*button product */
+
+var NumCart = document.querySelector(".cartNum span")
 const ItemBtn = document.querySelectorAll('.add_cart')
-
-
-
-icon.addEventListener('click',function() {
-    listPhone.classList.toggle('hide_list')
-})
-
-searchIcon.addEventListener('click', function() {
-    searchIcon.classList.add('hide')
-    searchInput.classList.remove('hide')
-})
-
-Imgslider.addEventListener('click',function(){
-    searchIcon.classList.remove('hide')
-    searchInput.classList.add('hide')
-})
-
-navChild.addEventListener('click', function() {
-    searchIcon.classList.remove('hide')
-    searchInput.classList.add('hide')
-})
-
 
 /* Lắng nghe sự kiện button Chuyển product qua local*/
 let items =[];
 for(let i = 0 ; i < ItemBtn.length ; i++) {
     ItemBtn[i].addEventListener('click',function(e) {
+        console.log(e.target.parentElement.nextSibling.parentElement.children[1].children[0].textContent)
         if(typeof(Storage) !== 'undefined') {
             let item = {
                 id: i+1,
                 img:e.target.parentElement.nextSibling.parentElement.parentElement.children[0].children[0].src,
                 name: e.target.parentElement.nextSibling.parentElement.children[0].textContent,
-                price: e.target.parentElement.nextSibling.parentElement.children[2].children[0].textContent,
+                price: e.target.parentElement.nextSibling.parentElement.children[1].children[0].textContent,
                 quantity: 1
                };
                if(JSON.parse(localStorage.getItem('items')) === null){

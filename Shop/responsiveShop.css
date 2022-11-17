@@ -25,6 +25,8 @@
     #content .card_product {
         grid-template-columns: repeat(2, 1fr);
     }
+
+
 }
 
 
@@ -168,6 +170,14 @@
         width: 35px;
         margin-top: px;
     }
-      
+    
+    #slider img {
+        width: 78%;
+        height: 180px;
+        border-radius: 10px;
+    }
+    #slider .control i {
+        display: none;
+    }
    
 }
