@@ -75,7 +75,6 @@ if (GetlocalCart[0] == null) {
 
 }
 
-var tong = formatCurrency(total)
 
 function Delete(e) {
     let items = []
@@ -109,10 +108,13 @@ function DeleteAll(e) {
     window.location.reload()
 }
 
+var tong = formatCurrency(total)
+
 document.querySelector('.buy_now').addEventListener('click', function () {
-    if (confirm('Bạn chắc chắn muốn đặt hàng?\nĐơn hàng của bạn là: ' + tong))
+    if (confirm('Bạn chắc chắn muốn mua hàng?\nĐơn hàng của bạn là: ' + tong))
         alert('Mua hàng thành công\nCảm ơn bạn!!!')
     else {
+        alert('Mua hàng không thành công')
 
     }
 })
