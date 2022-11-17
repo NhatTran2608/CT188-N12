@@ -119,10 +119,6 @@
         padding: 10px;
     }
 
-    #content{
-        margin: 20px;
-    }
-
     #content .list_product {
         transform: scale(1.02);
         transition: 0.1;
